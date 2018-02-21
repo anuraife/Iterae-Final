@@ -1,4 +1,9 @@
 
+.page-wrap{
+	width: 2000px;
+	margin: 0 auto;
+}
+
 .contents-container{
 	position: relative;
 	right: 350px;
