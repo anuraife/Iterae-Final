@@ -1,0 +1,240 @@
+
+.contents-container{
+	position: relative;
+	right: 350px;
+	top: 125px;
+}
+
+.scale-header-container {
+	display: inline;
+	text-align: left;
+    margin: 40px;
+}
+
+.scale-header {
+	font-size: 50px;
+	
+	position: relative;
+	top: 50px;
+	left: 300px;
+}
+
+.scale {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.metronome-container {
+	position: relative;
+	bottom: 95px;
+	left: 300px;
+	margin: 30px 200px;
+}
+
+#beginner-scale-container{
+	height: 47px;
+	width: 500px;
+	vertical-align: text-bottom;
+	position:absolute;
+	top: 100px;
+	left: 1000px;
+}
+
+#intermediate-scale-container{
+	visibility: hidden;
+	height: 100px;
+	width: 600px;
+	vertical-align: text-bottom;
+	position:absolute;
+	top: 100px;
+	left: 625px;	
+}
+
+#expert-scale-container{
+	visibility: hidden;
+	height: 47px;
+	width: 500px;
+	vertical-align: text-bottom;
+	position:absolute;
+	top: 100px;
+	left: 800px;
+}
+
+.scaleInBar {
+	background : none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-family: Comfortaa;
+}
+
+
+.selected{
+	font-size: 47px;
+	float: left;
+}
+
+.other {
+	float: left;
+	opacity: 0.5;
+	font-size: 20px;
+	position: relative;
+	top:27px;
+}
+
+.divider{
+	float: left;
+	font-size: 47px;
+}
+
+.metronome {
+	display: inline;
+	align-items: center;
+	text-align: center;
+}
+
+.metronome-text {
+	display: block;
+}
+
+input[type=number] {
+    outline: none;
+    border: none;
+}
+
+h2 {
+	font-size: 35px;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+	align-items: center;
+	text-align: center;
+}
+
+.bpm {
+	font-size: 60px;
+	font-weight: bold;
+	font-weight: 900;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	align-items: center;
+	text-align: center;
+}
+
+
+#key-dropbtn{
+	padding: 20px;
+    font-size: 47px;
+}
+
+.dropbtn {
+    background-color: white;
+    color: black;
+    
+    border: none;
+    font-family: Comfortaa;
+}
+
+.level-select-button{
+	font-size: 15px;
+	background : none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-family: Comfortaa;
+}
+
+.key-select-button{
+	font-size: 15px;
+	background : none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-family: Comfortaa;	
+}
+
+
+#scale-dropbtn{
+	font-size: 35px;
+}
+
+#scale-dropdown{
+	float: right;
+	position: absolute;
+	top: 100px;
+	left: 1250px;
+	width: 100px;
+}
+
+#drop-arrow{
+	font-size: 40px;
+}
+
+#key-dropdown{
+	position: absolute;
+	top: 100px;
+	left: 25px;
+	width: 60px;
+	height: 55px;
+}
+
+.dropdown {
+	right:0;
+	text-align: left;
+		
+}
+
+.scale-dropdown-content {
+	right: 0;
+    display: none;
+    background-color: #f1f1f1;
+    width: 400px;
+    box-shadow: 0px 6px 14px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.scale-dropdown-content a {
+	right: 0;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.scale-dropdown-content a:hover {background-color: #ddd}
+
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    width: 140px;
+    box-shadow: 0px 6px 14px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+#key-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#key-dropdown:hover #key-dropbtn {
+    background-color: #3e8e41;
+}
+
+
+#scale-dropdown:hover .scale-dropdown-content {
+    display: block;
+}
+
+#scale-dropdown:hover #scale-dropbtn {
+    background-color: #3e8e41;
+}
