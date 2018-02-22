@@ -84,7 +84,6 @@ function tick() {
 function consistent() {
 	interval = setInterval(function(){
 		tick();
-		console.log("uuh..");
 	}, 60000/tempo);
 }
 
