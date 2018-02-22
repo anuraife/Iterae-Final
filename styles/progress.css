@@ -1,0 +1,15 @@
+.page-wrap{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+
+.chart-box{
+	width: 600px;
+	height: 400px;
+	box-shadow: 2px 2px 2px 2px grey;
+	background-color: white;
+	position: absolute;
+	left: 200px;
+	top: 300px;
+}
