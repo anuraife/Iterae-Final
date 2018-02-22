@@ -10,12 +10,22 @@
 	top: 50px;
 }
 
-.scale {
+.scale-notes {
 	display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 100px;
     margin-bottom: 30px;
+    position: relative;
+    right: 600px;
 }
+
+.metronome-container {
+	position: relative;
+	bottom: 95px;
+	left: 100px;
+	margin: 30px 200px;
+}
+
 
 #beginner-scale-container{
 	height: 47px;
@@ -23,7 +33,7 @@
 	vertical-align: text-bottom;
 	position:absolute;
 	top: 100px;
-	left: 1000px;
+	left: 900px;
 }
 
 #intermediate-scale-container{
@@ -33,11 +43,17 @@
 	vertical-align: text-bottom;
 	position:absolute;
 	top: 100px;
-	left: 1000px;	
+	left: 525px;	
 }
 
 .other-level{
 	visibility: hidden;
+	height: 47px;
+	width: 500px;
+	vertical-align: text-bottom;
+	position:absolute;
+	top: 100px;
+	left: 700px;
 }
 
 .selected-level{
@@ -189,7 +205,7 @@ h2 {
 	float: right;
 	position: absolute;
 	top: 100px;
-	left: 1250px;
+	left: 1150px;
 	width: 100px;
 }
 
