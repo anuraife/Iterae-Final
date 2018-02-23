@@ -5,11 +5,48 @@
 
 
 .chart-box{
-	width: 600px;
+	width: 800px;
 	height: 400px;
 	box-shadow: 2px 2px 2px 2px grey;
 	background-color: white;
 	position: absolute;
 	left: 200px;
 	top: 300px;
+}
+.BPM-wrapper{
+  position: absolute;
+  left: 75px; top: 100px;
+  background-color:  #efefef;
+  width: 475px;
+  font-size: 20px;
+	text-align:center;
+}
+.Accuracy-wrapper{
+  position: absolute;
+  left: 75px; top: 185px;
+  background-color:  #efefef;
+  width: 475px;
+  font-size: 20px;
+	text-align:center;
+}
+.badge-wrapper {
+  position: absolute;
+  right:80px; bottom: 370px;
+  height: 130px; width: 600px;
+  float: left;
+  display: inline-block;
+  background-color:  #efefef;
+  padding-top: 20px;
+}
+
+.badge {
+  height: 75px; width: auto;
+  margin-left: 17px;
+  outline: none;
+  display: inline-block;
+}
+.sidebar-text {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 20px;
 }
