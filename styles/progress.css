@@ -48,7 +48,36 @@
   font-size: 20px;
   margin-left: 20px;
 }
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+}
 
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0px 15px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 table.blueTable {
   border: 0px solid #000000;
   width: 100%;
