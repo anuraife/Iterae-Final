@@ -10,28 +10,25 @@
 
 .scale-header {
 	font-size: 50px;
-	position: absolute;
-	left: 582.5px;
-	top: 65px;
+  float:center;
+	margin-left:350px;
 }
 
-.scale-notes {
+#scale-notes {
 	display: block;
     margin-left: auto;
     margin-right: 100px;
-    margin-bottom: 30px;
-    position: absolute;
-    left: 100px;
-    top: 500px;
+		margin-top: 350px;
+
 }
 
 #beginner-scale-container{
 	height: 47px;
 	width: 500px;
 	vertical-align: text-bottom;
-	position:absolute;
-	top: 100px;
-	left: 900px;
+	float: right;
+	margin-top: -550px;
+	margin-right: -190px;
 }
 
 #intermediate-scale-container{
@@ -39,9 +36,9 @@
 	height: 47px;
 	width: 500px;
 	vertical-align: text-bottom;
-	position:absolute;
-	top: 100px;
-	left: 525px;	
+	float: right;
+	margin-top: -550px;
+	margin-right: -190px;
 }
 
 .other-level{
@@ -49,9 +46,9 @@
 	height: 47px;
 	width: 500px;
 	vertical-align: text-bottom;
-	position:absolute;
-	top: 100px;
-	left: 700px;
+	float: right;
+	margin-top: -550px;
+	margin-right: -190px;
 }
 
 .selected-level{
@@ -90,9 +87,7 @@
 	float: right;
 	display: inline;
 	vertical-align: center;
-	position: absolute;
-	top: 250px;
-	left: 350px;
+	margin-top: -35%;
 }
 
 .controls {
@@ -105,6 +100,7 @@
 .play-pause {
 	height: 30px;
 	margin-bottom: 10px;
+	margin-right: -70px;
 }
 
 .play-pause:hover {
@@ -115,6 +111,7 @@
 .rhythm-options {
 	display: block;
 	align-items: center;
+	margin-right: -70px;
 }
 
 .rhythm {
@@ -134,7 +131,7 @@
 
 .metronome {
 	float: left;
-	margin-top: 20px;
+	margin-top: -10px;
 	align-items: center;
 	vertical-align: center;
 	justify-content: center;
@@ -148,6 +145,8 @@
 .metronome-text {
 	float: right;
 	display: block;
+	margin-right:20px;
+	margin-top: 50px;
 }
 
 input[type=number] {
@@ -184,13 +183,13 @@ h2 {
 
 #scale-dropbtn{
 	font-size: 35px;
+	background-color:green;
 }
 
 #scale-dropdown{
 	float: right;
-	position: absolute;
-	top: 100px;
-	left: 1150px;
+	margin-top: -550px;
+	margin-right: -20px;
 	width: 100px;
 }
 
@@ -211,43 +210,45 @@ h2 {
     display: block;
 }
 
-.scale-dropdown-content p:hover {background-color: #ddd}
+.scale-dropdown-content p:hover
+{background-color: #ddd}
 
 
 #drop-arrow{
 	font-size: 40px;
+	color:white;
 }
 
 #key-dropdown{
-	position: absolute;
-	top: 100px;
-	left: 25px;
-	width: 60px;
-	height: 150px;
+	float:left;
+	margin-top: -560px;
+	margin-left: -20px;
 }
 
 #key-dropbtn{
+	background-color:green;
 	padding: 20px;
-    font-size: 47px;
+  font-size: 35px;
+	color:white;
 }
 
 .dropbtn {
     background-color: white;
     color: black;
-    
+
     border: none;
     font-family: Comfortaa;
 }
 
 .dropdown {
 	text-align: left;
-		
+
 }
 
 .dropdown-content {
     display: none;
     background-color: #f1f1f1;
-    width: 140px;
+    width: 100px;
     box-shadow: 0px 6px 14px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
