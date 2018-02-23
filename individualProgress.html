@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Individual Progress</title>
+		<link rel="stylesheet" type="text/css" href="styles/btns.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/nav.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/practice.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/progress.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/individualProgress.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div class="nav" id="nav">
+			<a href="Home.html"><img src="res/logo.png" alt="Iterae Logo" class="logo"></a>
+			<ul>
+				<li><a href="javascript:void(0);" class="menu-icon" onclick="menuIcon()">&#9776;</a></li>
+				<li><a href="Home.html">Home</a></li>
+				<li><a href="#practice">Practice</a></li>
+				<li><a href="#progress">Progress</a></li>
+				<li><a href="#profile" class="profile-button">Profile</a></li>
+			<ul>
+			<a href="#profile"><img src="res/user_icon.svg" alt="Profile" class="profile-icon"></a>
+		</div>
+
+		<div class = "page-wrap">
+		
+			<div id = "chart-box">
+			</div>
+
+			<div class="BPM-wrapper">
+				<p> Average BPM: 110 </p>
+			</div>
+			<div class="Accuracy-wrapper">
+				<p> Average Accuracy: 76% </p>
+			</div>
+			<div class="badge-wrapper">
+				<div class="sidebar-text">
+					Badges
+				</div>
+				<input type="image" src="res/badges/badge1.png" alt="Badge 1" class="badge" id="1" >
+				<input type="image" src="res/badges/badge2.png" alt="Badge 2" class="badge" id="2">
+				<input type="image" src="res/badges/badge3.png" alt="Badge 3" class="badge" id="3">
+				<input type="image" src="res/badges/badge4.png" alt="Badge 4" class="badge" id="4">
+				<input type="image" src="res/badges/badge5.png" alt="Badge 5" class="badge" id="5">
+				<input type="image" src="res/badges/badge6.png" alt="Badge 6" class="badge" id="6">
+				<input type="image" src="res/badges/badge7.png" alt="Badge 7" class="badge" id="7">
+			</div>
+			<div id="myModal" class="modal">
+		   		<div class="modal-content">
+					<span class="close">&times;</span>
+			    	<p id="badgeInfo"></p>
+			  </div>
+			</div>
+
+
+
+		</div>
+
+
+
+		<script src="js/nav.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/progress.js"></script>
+		<script src="js/individualProgress.js"></script>
+	</body>
+</html>

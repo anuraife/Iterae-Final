@@ -1,0 +1,39 @@
+.page-wrap{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+
+#chart-box{
+	width: 800px;
+  height: 400px;
+	background-color: white;
+  box-shadow: 2px 2px 2px 2px grey;
+	position: absolute;
+	left: 75px; top: 320px;
+}
+.BPM-wrapper{
+  position: absolute;
+  left: 75px; top: 100px;
+  background-color:  #efefef;
+  width: 475px;
+  font-size: 20px;
+	text-align:center;
+}
+.Accuracy-wrapper{
+  position: absolute;
+  left: 75px; top: 185px;
+  background-color:  #efefef;
+  width: 475px;
+  font-size: 20px;
+	text-align:center;
+}
+.badge-wrapper {
+  right: 225px;
+  top: 100px;
+  height: 180px; width: 600px;
+  float: left;
+  display: inline-block;
+  background-color:  #efefef;
+
+}
