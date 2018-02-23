@@ -17,6 +17,7 @@ for (i = 0; i < acc.length; i++) {
 };
 
 function init(){
+    //Get badge info on click
     var modal = document.getElementById("myModal");
     console.log(modal);
     var btns = [];

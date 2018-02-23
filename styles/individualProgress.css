@@ -11,6 +11,7 @@
 	position: absolute;
 	left: 75px; top: 320px;
 }
+
 .BPM-wrapper{
   position: absolute;
   left: 75px; top: 100px;
@@ -19,6 +20,7 @@
   font-size: 20px;
 	text-align:center;
 }
+
 .Accuracy-wrapper{
   position: absolute;
   left: 75px; top: 185px;
@@ -27,6 +29,7 @@
   font-size: 20px;
 	text-align:center;
 }
+
 .badge-wrapper {
   right: 225px;
   top: 100px;
@@ -34,5 +37,4 @@
   float: left;
   display: inline-block;
   background-color:  #efefef;
-
 }
