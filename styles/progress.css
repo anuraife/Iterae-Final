@@ -29,17 +29,17 @@
 }
 .badge-wrapper {
   position: absolute;
-  right:80px; bottom: 370px;
-  height: 130px; width: 600px;
+  right:80px; bottom: 350px;
+  height: 180px; width: 600px;
   float: left;
   display: inline-block;
   background-color:  #efefef;
-  padding-top: 20px;
+
 }
 
 .badge {
   height: 75px; width: auto;
-  margin-left: 17px;
+  margin-left: 12px;
   outline: none;
   display: inline-block;
 }
