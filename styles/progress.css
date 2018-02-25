@@ -171,3 +171,12 @@ table.scaleTable tbody .scale{
   border: none;
   border-bottom: 1px solid #EEEEEE;
 }
+.individual-link{
+	float:right;
+	margin-top: 50px;
+	margin-right: 450px;
+}
+a {
+	text-decoration:none;
+	color: green;
+}

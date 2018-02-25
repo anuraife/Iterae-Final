@@ -31,10 +31,43 @@
 }
 
 .badge-wrapper {
-  right: 225px;
-  top: 100px;
+  right: 80px;
+  top: 85px;
   height: 180px; width: 600px;
   float: left;
   display: inline-block;
   background-color:  #efefef;
+}
+
+.key-select{
+	position: absolute;
+	top: 320px;
+	right: 320px;
+}
+.scale-select{
+	position: absolute;
+	top: 320px;
+	right: 195px;
+}
+.go{
+	background-color:green;
+	padding: 7px;
+  font-size: 15px;
+	font-family; Comfortaa;
+	color:white;
+	position: absolute;
+	top: 320px;
+	right: 80px;
+}
+.key-select select {
+	padding: 7px;
+  border: 0.5px solid green;
+  font-family: Comfortaa;
+  font-size: 15px;
+}
+.scale-select select {
+	padding: 7px;
+	border: 0.5px solid green;
+  font-family: Comfortaa;
+  font-size: 15px;
 }

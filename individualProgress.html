@@ -26,9 +26,48 @@
 		</div>
 
 		<div class = "page-wrap">
-		
+
 			<div id = "chart-box">
 			</div>
+				<div class = "key-select">
+					<span class = "select"></span>
+					<select id ="key">
+						<option> C</option>
+	    			<option>G</option>
+	    			<option>D</option>
+						<option>A</option>
+	    			<option>E</option>
+	    			<option>B</option>
+						<option>F#</option>
+	    			<option>C#</option>
+	    			<option>A&#9837</option>
+						<option>E&#9837</option>
+	    			<option>B&#9837</option>
+	    			<option>F</option>
+					</select>
+				</div>
+				<div class = "scale-select">
+					<span class = "select"></span>
+					<select id = "scale">
+						<option> Major </option>
+						<option> Minor </option>
+						<option> Harmonic </option>
+						<option> Melodic </option>
+						<option> Chromatic </option>
+						<option> Pentatonic </option>
+						<option> Ionian </option>
+						<option> Dorian </option>
+						<option> Phrygian </option>
+						<option> Lydian </option>
+						<option> Mixolydian </option>
+						<option> Aeolian </option>
+						<option> Locrian </option>
+					</select>
+				</div>
+				<button class = "go" onclick = "Go()"> See progress </button>
+
+
+
 
 			<div class="BPM-wrapper">
 				<p> Average BPM: 110 </p>
