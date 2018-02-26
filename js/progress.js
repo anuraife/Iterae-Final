@@ -14,7 +14,7 @@ var goodColor = "#608dff";
 var greatColor = "#67934b";
 var perfectColor = "#f9eb52";
 
-var colorMapping = [poorColor, goodColor, greatColor, perfectColor];
+var colorMapping = [poorColor, perfectColor, greatColor]; //, perfectColor];
 
 var keyMapping = ["C", "C#-Db", "D", "D#-Eb", "E", "F", "F#-Gb", "G", "G#-Ab", "A", "A#-Bb", "B"];
 var scaleMapping = ["Major", "Minor", "Harmonic", "Melodic", "Chromatic", "Pentatonic",
@@ -28,7 +28,7 @@ function init(){
             scaleChild = scale.childNodes[j];
             if(scaleChild.nodeName == 'TD'){
                 // Binned Color Function
-                scaleChild.style.backgroundColor = colorMapping[Math.floor(4*Math.random())];
+                scaleChild.style.backgroundColor = colorMapping[Math.floor(3*Math.random())];
                 //
 
                 //Gradient Functoin
