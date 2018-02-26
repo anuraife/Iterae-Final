@@ -92,7 +92,9 @@
 }
 
 .legend-container {
-  margin-top: 200px;
+  position: absolute;
+  left: 190px;
+  top: 315px;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -180,11 +182,14 @@ table.scaleTable tbody .scale{
   border: none;
   border-bottom: 1px solid #EEEEEE;
 }
-.individual-link{
-	float:right;
-	margin-top: 50px;
-	margin-right: 450px;
+
+.scale-progress{
+  position: absolute;
+  top: 275px;
+  left: 130px;
+  font-size: 20px;
 }
+
 a.scale-progress {
 	text-decoration:none;
 	color: #88bbd6;
