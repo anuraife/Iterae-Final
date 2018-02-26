@@ -12,6 +12,7 @@ var click = new Audio('res/metronome/click.wav');
 var currSelScale = document.getElementsByClassName("selected")[0];
 var currSelLevel = document.getElementsByClassName("selected-level")[0];
 
+
 // Initialize the progress page
 function init() {
 	document.getElementById("bpm").value = tempo.toString();
@@ -69,7 +70,7 @@ function startMetronome() {
        	    subdivision();
    	        break;
     	default:
-	}	
+	}
 }
 
 // Metronome action on each swing
@@ -103,9 +104,9 @@ function acceleration() {
 
 // Divided into swing
 function subdivision() {
-	interval = setInterval(function(){ 
+	interval = setInterval(function(){
 		tick();
-		timeout = setTimeout(function(){ 
+		timeout = setTimeout(function(){
 			tick();
 		}, 90000/tempo);
 	}, 120000/tempo);
@@ -118,5 +119,10 @@ function clearer() {
 	tempoAccel = tempo;
 	count = 0;
 }
+
+// function scalechange(){
+// 	var scale = document.getElementById("scale-notes");
+// 	scale.src = 'res/scales/g_major.png';
+// }
 
 init();
