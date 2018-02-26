@@ -31,11 +31,12 @@
 }
 
 .badge-wrapper {
-  right: 80px;
-  top: 85px;
-  height: 180px; width: 600px;
+	position: absolute;
+  right:30px; top: 100px;
+  height: 130px; width: 670px;
   float: left;
   display: inline-block;
+	padding-top: 17px;
   background-color:  #efefef;
 }
 
@@ -104,7 +105,7 @@ a.main:link, a.main:visited {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-  
+
 }
 
 

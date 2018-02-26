@@ -30,10 +30,11 @@
 
 .badge-wrapper-progress {
   position: absolute;
-  right:100px; top: 100px;
-  height: 180px; width: 600px;
+  right:30px; top: 100px;
+  height: 130px; width: 670px;
   float: left;
   display: inline-block;
+	padding-top: 17px;
   background-color:  #efefef;
 }
 
@@ -56,6 +57,7 @@
   text-align: left;
   font-size: 20px;
   margin-left: 20px;
+	margin-bottom: 10px;
 }
 .modal {
     display: none;
