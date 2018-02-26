@@ -12,7 +12,7 @@
 }
 
 .accordion {
-    background-color: pink;
+    background-color: #70ABAF;
     cursor: pointer;
     padding: 25px;
     width: 500px;
@@ -27,7 +27,7 @@
 }
 
 .active, .accordion:hover {
-    background-color: #ccc;
+    background-color: #F0F7F4;
 }
 
 .panel {
@@ -72,7 +72,7 @@ a:active {
   height: 130px; width: 450px;
   float: left;
   display: inline-block;
-  background-color:  #efefef;
+  background-color:  #F0F7F4;
   padding-top: 20px;
 }
 
@@ -121,12 +121,12 @@ a:active {
   float:left;
   width: 450px; height: 100px;
   display: inline-block;
-  background-color:  #efefef;
+  background-color:  #F0F7F4;
 }
 .announcements-wrapper{
   position: absolute;
   right: 85px; bottom: 60px;
-  background-color:  #efefef;
+  background-color:  #F0F7F4;
   width: 450px;
   font-size: 20px;
 }
