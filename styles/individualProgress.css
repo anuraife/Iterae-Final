@@ -42,28 +42,31 @@
 .key-select{
 	position: absolute;
 	top: 320px;
-	right: 320px;
+	right: 535px;
 }
 .scale-select{
 	position: absolute;
 	top: 320px;
-	right: 195px;
+	right: 400px;
 }
 .progress-select{
 	position: absolute;
 	top: 320px;
-	right: 80px;
+	right: 270px;
 }
 .go{
+  position: absolute;
 	background-color:green;
+  border: none;
 	padding: 7px;
   font-size: 15px;
-	font-family; Comfortaa;
-	color:white;
+	font-family: Comfortaa;
+	color: white;
 	position: absolute;
-	top: 375px;
-	right: 180px;
+	top: 365px;
+  right: 480px;
 }
+
 .key-select select {
 	padding: 7px;
   border: 0.5px solid green;
@@ -82,18 +85,25 @@
   font-family: Comfortaa;
   font-size: 15px;
 }
+
 .main-progress{
-	float:right;
-	margin-top: 360px;
-	margin-right: 65px
+  position: absolute;
+  top: 365px;
+  right: 470px;
+
 }
 a.main:link, a.main:visited {
+    height: 24px;
+    position: absolute;
     background-color: #f44336;
+    width: 200px;
     color: white;
-    padding: 5px;
+    padding: 7px 0px 0px 0px;
+    font-size: 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+  
 }
 
 
