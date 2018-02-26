@@ -49,6 +49,11 @@
 	top: 320px;
 	right: 195px;
 }
+.progress-select{
+	position: absolute;
+	top: 320px;
+	right: 80px;
+}
 .go{
 	background-color:green;
 	padding: 7px;
@@ -56,8 +61,8 @@
 	font-family; Comfortaa;
 	color:white;
 	position: absolute;
-	top: 320px;
-	right: 80px;
+	top: 375px;
+	right: 180px;
 }
 .key-select select {
 	padding: 7px;
@@ -70,4 +75,28 @@
 	border: 0.5px solid green;
   font-family: Comfortaa;
   font-size: 15px;
+}
+.progress-select select {
+	padding: 7px;
+	border: 0.5px solid green;
+  font-family: Comfortaa;
+  font-size: 15px;
+}
+.main-progress{
+	float:right;
+	margin-top: 360px;
+	margin-right: 65px
+}
+a.main:link, a.main:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+a.main:hover, a.main:active {
+    background-color: red;
 }

@@ -69,7 +69,8 @@ chart.render();
 function Go(){
 		var key = document.getElementById("key");
 		var scale = document.getElementById("scale");
-		if (key.selectedIndex == 0 && scale.selectedIndex == 1)
+    var progress = document.getElementById("progress");
+		if (key.selectedIndex == 0 && scale.selectedIndex == 1 && progress.selectedIndex == 0)
 		{
 			var chart = new CanvasJS.Chart("chart-box", {
 			animationEnabled: true,
@@ -100,7 +101,7 @@ function Go(){
 		});
 		chart.render();
 	}
-	else if (key.selectedIndex == 0 && scale.selectedIndex == 0)
+	else if (key.selectedIndex == 0 && scale.selectedIndex == 0 && progress.selectedIndex == 0)
 	{
 		var chart = new CanvasJS.Chart("chart-box", {
 			animationEnabled: true,
@@ -131,13 +132,13 @@ function Go(){
 		});
 		chart.render();
 		}
-    else if (key.selectedIndex == 1 && scale.selectedIndex == 0)
+    else if (key.selectedIndex == 1 && scale.selectedIndex == 0 && progress.selectedIndex == 1)
     {
       var chart = new CanvasJS.Chart("chart-box", {
         animationEnabled: true,
         theme: "light2",
         title:{
-          text: "G Major Accuracy"
+          text: "G Major Speed"
         },
         axisY:{
           includeZero: false
@@ -145,18 +146,18 @@ function Go(){
         data: [{
           type: "line",
           dataPoints: [
-            { x: new Date(2018, 01, 1), y: 60 },
-            { x: new Date(2018, 01, 2), y: 62 },
-            { x: new Date(2018, 01, 3), y: 64 },
-            { x: new Date(2018, 01, 6), y: 70 },
-            { x: new Date(2018, 01, 7), y: 73 },
-            { x: new Date(2018, 01, 11), y: 75 },
-            { x: new Date(2018, 01, 12), y: 67 },
-            { x: new Date(2018, 01, 20), y: 70 },
-            { x: new Date(2018, 01, 21), y: 75 },
-            { x: new Date(2018, 01, 22), y: 76 },
-            { x: new Date(2018, 01, 23), y: 74 },
-            { x: new Date(2018, 01, 24), y: 72 }
+            { x: new Date(2018, 01, 1), y: 90 },
+            { x: new Date(2018, 01, 2), y: 94 },
+            { x: new Date(2018, 01, 3), y: 95 },
+            { x: new Date(2018, 01, 6), y: 95 },
+            { x: new Date(2018, 01, 7), y: 95 },
+            { x: new Date(2018, 01, 11), y: 90 },
+            { x: new Date(2018, 01, 12), y: 90 },
+            { x: new Date(2018, 01, 20), y: 96 },
+            { x: new Date(2018, 01, 21), y: 100 },
+            { x: new Date(2018, 01, 22), y: 99 },
+            { x: new Date(2018, 01, 23), y: 101 },
+            { x: new Date(2018, 01, 24), y: 102 }
           ]
         }]
       });
