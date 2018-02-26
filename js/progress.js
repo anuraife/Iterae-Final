@@ -1,11 +1,11 @@
 var i;
 var BadgeArray = [
-    "Level 1 Badge", 
-    "Level 2 Badge", 
-    "Level 3 Badge", 
-    "Level 4 Badge", 
-    "Speedster Badge", 
-    "100% Accuracy Badge", 
+    "Level 1 Badge",
+    "Level 2 Badge",
+    "Level 3 Badge",
+    "Level 4 Badge",
+    "Speedster Badge",
+    "100% Accuracy Badge",
     "Beethoven Badge"
 ]
 
