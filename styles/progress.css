@@ -1,8 +1,9 @@
+@import 'colors.css';
+
 .page-wrap{
 	width: 1200px;
 	margin: 0 auto;
 }
-
 
 .chart-box{
 	width: 800px;
@@ -14,7 +15,7 @@
 .BPM-wrapper{
   position: absolute;
   left: 75px; top: 100px;
-  background-color:  #efefef;
+  background-color: var(--light-grey);
   width: 475px;
   font-size: 20px;
 	text-align:center;
@@ -22,7 +23,7 @@
 .Accuracy-wrapper{
   position: absolute;
   left: 75px; top: 185px;
-  background-color:  #efefef;
+  background-color: var(--light-grey);
   width: 475px;
   font-size: 20px;
 	text-align:center;
@@ -35,7 +36,7 @@
   float: left;
   display: inline-block;
 	padding-top: 17px;
-  background-color:  #efefef;
+  background-color: var(--light-grey);
 }
 
 .badge-wrapper {
@@ -44,7 +45,7 @@
   height: 180px; width: 600px;
   float: left;
   display: inline-block;
-  background-color:  #efefef;
+  background-color: var(--light-grey);
 }
 
 .badge {
@@ -100,11 +101,11 @@
 .legend-header {
   vertical-align: top;
   float: left;
-	margin-left: 40px;
+	margin-left: 110px;
 }
 
 .legend {
-  width: 200px;
+  width: 250px;
   margin: auto;
   margin-left: 10px;
   float: left;
@@ -112,27 +113,31 @@
 
 #legend-box {
   width: 25%;
-  height: 30px;
+  height: 26px;
   float: left;
-  padding-top: 10px;
+  padding-top: 8px;
 	margin-top: 20px;
-  color: white;
+}
+
+#legend-box .good {
+  color: black;
 }
 
 .poor {
+  color: white;
   background-color: #ff3d43;
+  border-radius: 10px 0px 0px 10px;
 }
 
 .good {
-  background-color: #608dff;
+  color: black;
+  background-color: #f9eb52;
 }
 
 .great {
+  color: white;
   background-color: #67934b;
-}
-
-.perfect {
-  background-color: #f9eb52;
+  border-radius: 0px 10px 10px 0px;
 }
 
 table.scaleTable {

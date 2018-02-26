@@ -15,7 +15,6 @@
 .BPM-wrapper{
   position: absolute;
   left: 75px; top: 100px;
-  background-color:  #efefef;
   width: 475px;
   font-size: 20px;
 	text-align:center;
@@ -24,7 +23,6 @@
 .Accuracy-wrapper{
   position: absolute;
   left: 75px; top: 185px;
-  background-color:  #efefef;
   width: 475px;
   font-size: 20px;
 	text-align:center;
@@ -37,7 +35,6 @@
   float: left;
   display: inline-block;
 	padding-top: 17px;
-  background-color:  #efefef;
 }
 
 .key-select{

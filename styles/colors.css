@@ -1,0 +1,12 @@
+:root {
+	--maroon: #872642;
+
+	/* Greys */
+	--grey: #aaaaaa;
+	--light-grey: #efefef;
+	--faded-grey: #fefefe;
+
+	/* Blues */
+	--light-blue: #70abaf;
+	--faded-blue: #f0f7f4;
+}

@@ -10,11 +10,10 @@ var BadgeArray = [
 ]
 
 var poorColor = "#ff3d43";
-var goodColor = "#608dff";
+var goodColor = "#f9eb52";
 var greatColor = "#67934b";
-var perfectColor = "#f9eb52";
 
-var colorMapping = [poorColor, perfectColor, greatColor]; //, perfectColor];
+var colorMapping = [poorColor, goodColor, greatColor];
 
 var keyMapping = ["C", "C#-Db", "D", "D#-Eb", "E", "F", "F#-Gb", "G", "G#-Ab", "A", "A#-Bb", "B"];
 var scaleMapping = ["Major", "Minor", "Harmonic", "Melodic", "Chromatic", "Pentatonic",
