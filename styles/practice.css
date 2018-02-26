@@ -183,7 +183,7 @@ h2 {
 
 #scale-dropbtn{
 	font-size: 35px;
-	background-color:green;
+	background-color:#88bbd6;
 }
 
 #scale-dropdown{
@@ -227,7 +227,7 @@ h2 {
 }
 
 #key-dropbtn{
-	background-color:green;
+	background-color:#88bbd6;
 	padding: 20px;
   font-size: 35px;
 	color:white;
@@ -278,7 +278,8 @@ h2 {
 }
 
 #key-dropdown:hover #key-dropbtn {
-    background-color: #3e8e41;
+    background-color: #caebf2;
+		color: black;
 }
 
 
@@ -287,5 +288,6 @@ h2 {
 }
 
 #scale-dropdown:hover #scale-dropbtn {
-    background-color: #3e8e41;
+    background-color: #caebf2;
+		color:black;
 }

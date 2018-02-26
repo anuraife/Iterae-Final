@@ -13,7 +13,7 @@
 }
 
 .accordion {
-    background-color: var(--light-blue);
+    background-color: var(--dark-blue);
     cursor: pointer;
     padding: 25px;
     width: 500px;
@@ -24,13 +24,13 @@
     font-size: 25px;
     transition: 0.4s;
     float: top;
-    color: white;
+    color: var(--light-grey);
     font-family: Comfortaa;
 }
 
 .active, .accordion:hover {
     color: black;
-    background-color: var(--faded-blue);
+    background-color: var(--light-blue);
 }
 
 .panel {
@@ -40,19 +40,19 @@
     overflow: hidden;
     margin-left: 20px;
 }
-a:link {
+a.scale:link {
     text-decoration: none;
 }
 
-a:visited {
+a.scale:visited {
     text-decoration: none;
 }
 
-a:hover {
-    color:green;
+a.scale:hover {
+    color:#339966;
 }
 
-a:active {
+a.scale:active {
     text-decoration: underline;
 }
 
@@ -76,7 +76,7 @@ a:active {
   float: left;
   display: inline-block;
   padding-top: 20px;
-  background-color: var(--faded-blue);
+  background-color: var(--light-grey);
 }
 
 .badge {
@@ -124,12 +124,12 @@ a:active {
   float:left;
   width: 450px; height: 100px;
   display: inline-block;
-  background-color: var(--faded-blue);
+  background-color: var(--light-grey);
 }
 .announcements-wrapper{
   position: absolute;
   right: 85px; bottom: 60px;
   width: 450px;
   font-size: 20px;
-  background-color: var(--faded-blue);
+  background-color: var(--light-grey);
 }
