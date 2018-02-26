@@ -185,7 +185,14 @@ table.scaleTable tbody .scale{
 	margin-top: 50px;
 	margin-right: 450px;
 }
-a {
+a.scale-progress {
 	text-decoration:none;
-	color: green;
+	color: #88bbd6;
+}
+a.scale-progress:hover {
+    color:#52658f;
+}
+
+a.scale-progress:active {
+    text-decoration: underline;
 }

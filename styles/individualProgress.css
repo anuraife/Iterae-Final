@@ -55,7 +55,7 @@
 }
 .go{
   position: absolute;
-	background-color:green;
+	background-color:#52658f;
   border: none;
 	padding: 7px;
   font-size: 15px;
@@ -65,22 +65,25 @@
 	top: 365px;
 	left: 920px;
 }
+.go:hover{
+	background-color: #caebf2;
+}
 
 .key-select select {
 	padding: 7px;
-  border: 0.5px solid green;
+  border: 0.5px solid #52658f;
   font-family: Comfortaa;
   font-size: 15px;
 }
 .scale-select select {
 	padding: 7px;
-	border: 0.5px solid green;
+	border: 0.5px solid #52658f;
   font-family: Comfortaa;
   font-size: 15px;
 }
 .progress-select select {
 	padding: 7px;
-	border: 0.5px solid green;
+	border: 0.5px solid #52658f;
   font-family: Comfortaa;
   font-size: 15px;
 }
@@ -94,7 +97,7 @@
 a.main:link, a.main:visited {
     height: 24px;
     position: absolute;
-    background-color: #f44336;
+    background-color: #88bbd6;
     width: 200px;
     color: white;
     padding: 7px 0px 0px 0px;
@@ -102,10 +105,9 @@ a.main:link, a.main:visited {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-
 }
 
 
 a.main:hover, a.main:active {
-    background-color: red;
+    background-color: #caebf2;
 }
