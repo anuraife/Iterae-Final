@@ -42,17 +42,18 @@
 .key-select{
 	position: absolute;
 	top: 320px;
-	right: 535px;
+	left: 920px;
 }
 .scale-select{
 	position: absolute;
 	top: 320px;
-	right: 400px;
+	left: 1000px;
+
 }
 .progress-select{
 	position: absolute;
 	top: 320px;
-	right: 270px;
+	left: 1142px;
 }
 .go{
   position: absolute;
@@ -64,7 +65,7 @@
 	color: white;
 	position: absolute;
 	top: 365px;
-  right: 480px;
+	left: 920px;
 }
 
 .key-select select {
@@ -89,7 +90,7 @@
 .main-progress{
   position: absolute;
   top: 365px;
-  right: 470px;
+  left: 1050px;
 
 }
 a.main:link, a.main:visited {
