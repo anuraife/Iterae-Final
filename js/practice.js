@@ -120,9 +120,5 @@ function clearer() {
 	count = 0;
 }
 
-// function scalechange(){
-// 	var scale = document.getElementById("scale-notes");
-// 	scale.src = 'res/scales/g_major.png';
-// }
 
 init();

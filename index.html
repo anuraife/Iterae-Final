@@ -1,100 +1,82 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Practice</title>
-		<link rel="stylesheet" type="text/css" href="styles/btns.css"/>
-        <link rel="stylesheet" type="text/css" href="styles/nav.css"/>
-        <link rel="stylesheet" type="text/css" href="styles/practice.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body>
-		<div class="nav" id="nav">
-			<a href="home.html"><img src="res/logo.png" alt="Iterae Logo" class="logo"></a>
-			<ul>
-				<li><a href="javascript:void(0);" class="menu-icon" onclick="menuIcon()">&#9776;</a></li>
-				<li><a href="home.html">Home</a></li>
-				<li><a href="#practice">Practice</a></li>
-				<li><a href="progress.html">Progress</a></li>
-				<li><a href="#profile" class="profile-button">Profile</a></li>
-			<ul>
-			<a href="#profile"><img src="res/user_icon.svg" alt="Profile" class="profile-icon"></a>
-		</div>
-<div class = "page-wrap">
-		<div class="contents-container">
-		  	<div class="scale-header-container">
-		    	<h1 class="scale-header">
-		    		<a id = "key-name">C</a>
-		    		<a id = "scale-name">Major</a>
-		    	</h1>
-			</div>
-			<div>
-				<img src="res/scales/c_major.png" alt="Scale" id="scale-notes">
-			</div>
-		</div>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/nav.css"/>
+<link rel="stylesheet" type="text/css" href="styles/home.css"/>
+<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+</head>
+<body>
+	<div class="nav" id="nav">
+	<a href="#home"><img src="res/logo.png" alt="Iterae Logo" class="logo"></a>
+	<ul>
+		<li><a href="javascript:void(0);" class="menu-icon" onclick="menuIcon()">&#9776;</a></li>
+		<li><a href="#home">Home</a></li>
+		<li><a href="practice.html">Practice</a></li>
+		<li><a href="progress.html">Progress</a></li>
+		<li><a href="#profile" class="profile-button">Profile</a></li>
+	</ul>
+	<a href="#profile"><img src="res/user_icon.svg" alt="Profile" class="profile-icon"></a>
+	</div>
+<div class = 'page-wrap'>
+<div class = "levels-wrapper">
+<button class="accordion" onclick="Accordian()">Beginner</button>
+<div class="panel">
+	<a href = progress.html>
+		<h4> Major</h4>
+	</a>
+	<h4><a href="#">Minor</a></h4>
+</div>
+<button class="accordion" onclick="Accordian()">Intermediate</button>
+<div class="panel">
+	<h4 class="int_scales"><a href="#">Harmonic Minor</a></h4>
+	<h4 class="int_scales"><a href="#">Melodic Minor</a></h4>
+	<h4 class="int_scales"><a href="#">Chromatic</a></h4>
+	<h4 class="int_scales"><a href="#">Pentatonic</a></h4>
+</div>
+<button class="accordion"onclick="Accordian()">Expert</button>
+<div class="panel">
+	<h4 class="exp_scales"><a href="#">Ionian</a></h4>
+	<h4 class="exp_scales"><a href="#">Dorian</a></h4>
+	<h4 class="exp_scales"><a href="#">Phrygian</a></h4>
+	<h4 class="exp_scales"><a href="#">Lydian</a></h4>
+	<h4 class="exp_scales"><a href="#">Mixolydian</a></h4>
+	<h4 class="exp_scales"><a href="#">Aeolian</a></h4>
+	<h4 class="exp_scales"><a href="#">Locrian</a></h4>
+</div>
 
-		<div class = "selected-level" id = "beginner-scale-container">
-			<button id = "scale1" class = "beg selected scaleInBar"> Major </button>
-			<a id = "div1" class = "divider"> / </a>
-			<button id = "scale2" class = "beg other scaleInBar"> Minor </button>
+</div>
+<div class = "sidebar-wrapper">
+	<div class="streak-wrapper">
+		<div class="sidebar-text">
+			<img src="res/streak.png" alt="Streak" class="badge">
+			2 day streak
 		</div>
+	</div>
 
-		<div class = "other-level" id = "intermediate-scale-container">
-			<button id = "scale1" class = "int selected scaleInBar"> Harmonic </button>
-			<a id = "div1" class = "divider"> / </a>
-			<button id = "scale2" class = "int other scaleInBar"> Melodic</button>
-			<a id = "div2" class = "divider"> / </a>
-			<button id = "scale3" class = "int other scaleInBar"> Chromatic </button>
-			<a id = "div3" class = "divider"> / </a>
-			<button id = "scale4" class = "int other scaleInBar"> Pentatonic </button>
+	<div class="badge-wrapper">
+		<div class="sidebar-text">
+			Badges
 		</div>
+		<input type="image" src="res/badges/badge1.png" alt="Badge 1" class="badge" id="1" >
+		<input type="image" src="res/badges/badge2.png" alt="Badge 2" class="badge" id="2">
+		<input type="image" src="res/badges/badge3.png" alt="Badge 3" class="badge" id="3">
+		<input type="image" src="res/badges/badge4.png" alt="Badge 4" class="badge" id="4">
+	</div>
 
-		<!-- For the purpose of the depth of this prototype, the expert level has not yet been implemented -->
-		<div class = "other-level" id = "expert-scale-container">
-			<button id = "exp-scale1" class = "selected scaleInBar"> Test </button>
-			<a id = "div1" class = "divider"> / </a>
-			<button id = "exp-scale2" class = "other scaleInBar">  Test </button>
-			<a id = "div2" class = "divider"> / </a>
-			<button id = "exp-scale3" class = "other scaleInBar"> Test </button>
-			<a id = "div3" class = "divider"> / </a>
-			<button id = "exp-scale4" class = "other scaleInBar"> Test </button>
-		</div>
+	<div class = "announcements-wrapper">
+		<p class="sidebar-text"> Last practiced . . . Today </p>
+		<p class="sidebar-text"> Last scale practiced . . . C Major </p>
+		<p class="sidebar-text"> Last badge earned . . . Harmony Badge </p>
+	</div>
+	<div id="myModal" class="modal">
+   		<div class="modal-content">
+			<span class="close">&times;</span>
+	    	<p id="badgeInfo"></p>
+	  </div>
+	</div>
+</div>
 
-		<div class="metronome-container">
-			<div class="metronome">
-				<img src="res/metronome/metronome.png" alt="Metronome" class="metronome-image" id="metronome">
-				<div class="metronome-text">
-					<input type="number" class="bpm" id="bpm" min="1" max="220"></input>
-					<h2>BPM</h2>
-				</div>
-			</div>
-			<div class="controls">
-				<img src="res/play.png" class="play-pause" id="playPause" onclick="metronome()">
-		    	<div class="rhythm-options">
-			    	<button class="btn paper-flatten" id="consistent" onclick="switchRhythm('consistent')">Consistent</button>
-			    	<button class="btn paper-flatten" id="acceleration" onclick="switchRhythm('acceleration')">Acceleration</button>
-			    	<button class="btn paper-flatten" id="subdivision" onclick="switchRhythm('subdivision')">Sub Division</button>
-			    </div>
-			</div>
-		</div>
-
-		<div id = "scale-dropdown" class = "dropdown">
-			<button id = "scale-dropbtn" class = "dropbtn">
-				      <i id = "drop-arrow" class="material-icons">expand_more</i>
-			 </button>
-			<div class="scale-dropdown-content">
-				<p><button class = "level-select-button" id = "beginner-scale-select">
-					Major/Minor
-				</button></p>
-    			<p><button class = "level-select-button" id = "intermediate-scale-select">
-    			Harmonic Minor/Melodic Minor/...</button></p>
-    			<p><button class = "level-select-button" id = "expert-scale-select">
-    			Ionian/Dorian/Phrygian/...</button></p>
-			</div>
-		</div>
-
-		<!-- Only key changing for keys C, G, and D is currently implemented -->
 		<div id = "key-dropdown" class="dropdown">
 	  		<button id = "key-dropbtn" class="dropbtn">Key</button>
 	  			<div class="dropdown-content">
@@ -173,8 +155,7 @@
 	  			</div>
 		</div>
 </div>
-		<script src="js/nav.js"></script>
-		<script src="js/practice.js"></script>
-		<script src="js/jquery.js"></script>
-	</body>
+<script src="js/nav.js"></script>
+<script src="js/home.js"></script>
+</body>
 </html>
