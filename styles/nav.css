@@ -45,12 +45,16 @@ li a {
 }
 
 .profile-icon {
+  position: absolute;
   width: 30px;
   height: 30px;
-  margin-right: 200px;
-  margin-top: 10px;
-  border: 1px solid grey;
-  border-radius: 50%;
+  left: 1220px;
+  top: 15px;
+  display: none;
+  /*margin-right: 200px;
+  margin-top: 10px;*/
+  /*border: 1px solid grey;*/
+  /*border-radius: 50%;*/
   float: right;
 }
 

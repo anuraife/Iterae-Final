@@ -5,6 +5,22 @@
   margin: 0 auto;
 }
 
+.login-signup-link{
+  position: absolute;
+  left: 1126px;
+  top: 20px;  
+  float: left;
+}
+
+#signup-slash{
+  margin-left: 60px;
+}
+
+#signup-link{
+  margin-left: 74px;
+}
+
+
 .levels-wrapper{
     position: absolute;
     top: 150px;

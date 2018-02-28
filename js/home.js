@@ -1,6 +1,8 @@
 window.onload = function Accordian(){
 var acc = document.getElementsByClassName("accordion");
 var i;
+var loggedIn = false;
+
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
