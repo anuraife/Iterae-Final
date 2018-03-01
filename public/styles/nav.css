@@ -58,6 +58,36 @@ li a {
   float: right;
 }
 
+.nav-right-container {
+  display: inline;
+  float: right;
+}
+
+.nav-right {
+  text-align: center;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  float: right;
+}
+
+.username {
+  color: var(--grey);
+  margin-right: 20px;
+}
+
+.sign-out {
+  width: 95px;
+  margin-right: 100px;
+  padding: 10px 15px;
+  background-color: var(--dark-blue);
+  cursor: pointer;
+  border: grey;
+  border-radius: 10px;
+  transition: 0.4s;
+  color: white;
+}
+
 .nav .menu-icon {
   display: none;
 }
@@ -76,6 +106,9 @@ li a {
     float: center;
   }
   .profile-icon {
+    display: none;
+  }
+  .signout-link {
     display: none;
   }
 }

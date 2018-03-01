@@ -1,0 +1,40 @@
+.splash-container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.splash-logo {
+  width: 100px;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.credentials {
+}
+
+.credentials-input {
+  margin-bottom: 30px;
+}
+
+.email, .password {
+  display:inline;
+  width:auto;
+  outline: none;
+}
+
+
+
+.mdl-card {
+  overflow: visible;
+}
+.grecaptcha-logo {
+  background-color: white;
+}
+.mdl-grid {
+  max-width: 1024px;
+  margin: auto;
+}
+.mdl-layout__header-row {
+  padding: 0;
+}

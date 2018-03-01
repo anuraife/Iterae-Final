@@ -19,7 +19,27 @@ var keyMapping = ["C", "C#-Db", "D", "D#-Eb", "E", "F", "F#-Gb", "G", "G#-Ab", "
 var scaleMapping = ["Major", "Minor", "Harmonic", "Melodic", "Chromatic", "Pentatonic",
                     "Ionian", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aeolian", "Locrian"];
 
-function init(){
+function init(){   
+    // Check if logged in
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var isAnonymous = user.isAnonymous;
+            var uid = user.uid;
+            var providerData = user.providerData;
+            signedIn = true;
+            document.getElementById('username').innerHTML = (email) ? email : "(No name)";
+            document.getElementById('sign-out').addEventListener('click', signOut, false);
+        } else {
+            signedIn = false;
+            window.location.href="splash.html";
+        }
+    });
+
+
     for (i=0; i<scaleMapping.length; i++) {
         var scaleName = scaleMapping[i];
         var scale = document.getElementById(scaleName);
@@ -68,5 +88,12 @@ function init(){
     	return BadgeArray[num-1];
     }
 };
+
+function signOut() {
+    if (firebase.auth().currentUser) {
+        firebase.auth().signOut();
+        window.location.href="splash.html";
+    }
+}
 
 init();

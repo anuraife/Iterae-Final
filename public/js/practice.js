@@ -15,6 +15,25 @@ var currSelLevel = document.getElementsByClassName("selected-level")[0];
 
 // Initialize the progress page
 function init() {
+		// Check if logged in
+	firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var isAnonymous = user.isAnonymous;
+            var uid = user.uid;
+            var providerData = user.providerData;
+            signedIn = true;
+            document.getElementById('username').innerHTML = (email) ? email : "(No name)";
+            document.getElementById('sign-out').addEventListener('click', signOut, false);
+        } else {
+            signedIn = false;
+            window.location.href="splash.html";
+        }
+    });
+
 	document.getElementById("bpm").value = tempo.toString();
 	selectRhythm(rhythm);
 };
@@ -118,6 +137,13 @@ function clearer() {
 	clearTimeout(timeout);
 	tempoAccel = tempo;
 	count = 0;
+}
+
+function signOut() {
+    if (firebase.auth().currentUser) {
+        firebase.auth().signOut();
+    	window.location.href="splash.html";
+    }
 }
 
 

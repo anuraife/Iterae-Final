@@ -10,6 +10,25 @@ var BadgeArray = [
 ]
 
 function init(){
+		// Check if logged in
+	firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var isAnonymous = user.isAnonymous;
+            var uid = user.uid;
+            var providerData = user.providerData;
+            signedIn = true;
+            document.getElementById('username').innerHTML = (email) ? email : "(No name)";
+            document.getElementById('sign-out').addEventListener('click', signOut, false);
+        } else {
+            signedIn = false;
+            window.location.href="splash.html";
+        }
+    });
+
 	var modal = document.getElementById("myModal");
 	console.log(modal);
 	var btns = [];
@@ -135,6 +154,13 @@ function Go(){
 			  ]
 			graph(title, data);
 	    }
+}
+
+function signOut() {
+    if (firebase.auth().currentUser) {
+        firebase.auth().signOut();
+    	window.location.href="splash.html";
+    }
 }
 
 init();
