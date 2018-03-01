@@ -96,4 +96,6 @@ function signOut() {
     }
 }
 
-init();
+window.onload = function() {
+    init();
+}

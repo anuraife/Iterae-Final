@@ -44,7 +44,7 @@ function metronome() {
 	paused = !paused;
 	if (paused) {
 		playPause.src = "res/play.png";
-		document.getElementById("metro").src = "res/metronome/metro_1/metro.png";
+		document.getElementById("metro").src = "res/metronome/metro_1/metronome.png";
 		clearer();
 	} else {
 		playPause.src = "res/pause.png";
@@ -94,8 +94,8 @@ function startMetronome() {
 
 // Metronome action on each swing
 function tick() {
-	frame = metronomeLeft ? "_l3" : ("_r3");
-	document.getElementById("metro").src = "res/metronome/metro_1" + frame + ".png";
+	frame = metronomeLeft ? "l2" : ("r2");
+	document.getElementById("metro").src = "res/metronome/metro_1/metro_" + frame + ".png";
 	metronomeLeft = !metronomeLeft;
 	click.play();
 }
@@ -146,5 +146,6 @@ function signOut() {
     }
 }
 
-
-init();
+window.onload = function() {	
+	init();
+}
