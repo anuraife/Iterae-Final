@@ -12,3 +12,9 @@
 .timesig{
   font-weight: bold;
 }
+.avatar{
+  height: 75px; width: auto;
+  margin-right: 15px;
+  outline: none;
+  display: inline-block;
+}
