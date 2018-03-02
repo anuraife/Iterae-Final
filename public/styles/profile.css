@@ -1,0 +1,14 @@
+.settings{
+  margin-left: 500px;
+  margin-top: 75px;
+}
+.change-metronome{
+  margin-left: -75px;
+  color: #88bbd6;
+}
+.account-settings{
+  color: #88bbd6;
+}
+.timesig{
+  font-weight: bold;
+}
