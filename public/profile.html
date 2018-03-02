@@ -24,13 +24,48 @@
 		<li><a href="progress.html">Progress</a></li>
 		<li><a href ="profile.html"> Profile </a></li>
 		<li><a href="#profile" class="profile-button">Profile</a></li>
-		<div class="nav-right-container">
+		
+				<div class="nav-right-container">
 			<button class="nav-right sign-out" id="sign-out"> Sign Out </button>
-			<h3 class="nav-right username" id="username"></h3>
+
+			<div id = "options-dropdown" class="dropdown">
+	  			<button id = "options-dropbtn" class="dropbtn">
+	  			<h3 class="nav-right username" id="username"></h3>
+
+  			</button>
+	  			<div class="options-dropdown-content">
+						<a href="profile.html">
+							<button class = "options-select-button"
+							onclick="console.log('Test1')">
+								Your Profile
+							</button>
+						</a>
+		    		<a href="#">
+		    			<button class = "options-select-button"
+							onclick="console.log('Test2')">
+								Test2
+							</button>
+		    		</a>
+		    		<a href="#">
+		    			<button class = "options-select-button"
+							onclick="console.log('Test3')">
+								Test3
+							</button>
+		    		</a>
+		    	</div>
+
+			
+			</div>
 		</div>
 	</ul>
 	<a href="#profile"><img src="res/user_icon.svg" alt="Profile" class="profile-icon"></a>
 	</div>
+
+
+
+
+
+	
   <h1 class = "username"> Display User Name </h1>
   <div class = "settings">
     <h1 class = "account-settings"> Account Settings </h1>
