@@ -38,3 +38,9 @@
 .mdl-layout__header-row {
   padding: 0;
 }
+
+
+.login-signup-buttons{
+  position: relative;
+  /*left: -95px;*/
+}

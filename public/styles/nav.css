@@ -6,8 +6,10 @@ body {
 
 .nav {
     padding: 10px 0px;
-    overflow: hidden;
+    overflow: visible;
     background-color: #efefef;
+    height: 50px;
+    
 }
 
 .logo {
@@ -61,6 +63,7 @@ li a {
 .nav-right-container {
   display: inline;
   float: right;
+  width: 400px;
 }
 
 .nav-right {
