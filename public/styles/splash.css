@@ -1,3 +1,5 @@
+@import 'colors.css';
+
 .splash-container {
   align-items: center;
   justify-content: center;
@@ -8,6 +10,11 @@
   width: 100px;
   margin-top: 200px;
   margin-bottom: 100px;
+}
+
+.displayMessage {
+  margin-bottom: 15px;
+  color: var(--maroon);
 }
 
 .credentials {

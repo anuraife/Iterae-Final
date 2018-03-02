@@ -31,17 +31,17 @@ function signUp() {
 }
 
 function verifyNewCredentials(email, password, confirmPassword) {
-    console.log(email);
-    if (email.length < 7) {
-      alert('Please enter a valid email address.');
+    var displayMessage = document.getElementById('displayMessage');
+    if (email.length < 7 || !email.includes("@") || !email.includes(".")) {
+      displayMessage.innerHTML = 'Please enter a valid email address.';
       return false;
     }
     if (password.length < 6) {
-      alert('Password must be at least 6 characters');
+      displayMessage.innerHTML = 'Password must be at least 6 characters';
       return false;
     }
     if (password !== confirmPassword) {
-      alert('Passwords do not match');
+      displayMessage.innerHTML = 'Passwords do not match';
       return false;
     }
     return true;
@@ -50,7 +50,7 @@ function verifyNewCredentials(email, password, confirmPassword) {
 function handleSignupError(error) {
     var errorCode = error.code;
     var errorMessage = error.message;
-    alert(errorMessage);
+    document.getElementById('displayMessage').innerHTML = errorMessage;
     console.log(error);
 }
 
