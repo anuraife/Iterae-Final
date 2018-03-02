@@ -1,3 +1,6 @@
+@import 'colors.css';
+
+
 h1, h2, h3, body {
     margin: 0;
     font-family: 'Comfortaa', cursive;
@@ -83,6 +86,7 @@ li a {
   margin-right: 100px;
   padding: 10px 15px;
   background-color: var(--dark-blue);
+  /*background-color: blue;*/
   cursor: pointer;
   border: grey;
   border-radius: 10px;
