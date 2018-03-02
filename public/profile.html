@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/nav.css"/>
+<link rel="stylesheet" type="text/css" href="styles/profile.css"/>
+<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
+<script src="js/config.js"></script>
+<script src="js/nav.js"></script>
+<script sec="js/navbar.js"></script>
+</head>
+<body>
+  <div class="nav" id="nav">
+	<a href="#home"><img src="res/logo.png" alt="Iterae Logo" class="logo"></a>
+	<ul>
+		<li><a href="javascript:void(0);" class="menu-icon" onclick="menuIcon()">&#9776;</a></li>
+		<li><a href="#home">Home</a></li>
+		<li><a href="practice.html">Practice</a></li>
+		<li><a href="progress.html">Progress</a></li>
+		<li><a href ="profile.html"> Profile </a></li>
+		<li><a href="#profile" class="profile-button">Profile</a></li>
+		<div class="nav-right-container">
+			<button class="nav-right sign-out" id="sign-out"> Sign Out </button>
+			<h3 class="nav-right username" id="username"></h3>
+		</div>
+	</ul>
+	<a href="#profile"><img src="res/user_icon.svg" alt="Profile" class="profile-icon"></a>
+	</div>
+  <h1 class = "username"> Display User Name </h1>
+  <div class = "settings">
+    <h1 class = "account-settings"> Account Settings </h1>
+    <label for="BPM"><b>Starting BPM</b></label>
+      <input type="text" placeholder="Enter number 1-200" name="newBPM">
+    <p class = "timesig"> Time Signature </p>
+    <input type="radio" name="timesignature" value="4/4" checked> 4/4<br>
+    <input type="radio" name="timesignature" value="6/8"> 6/8<br>
+    <label for="password"><b>Change Password</b></label>
+      <input type="text" placeholder="Enter new password" name="newpassword">
+  <div>
+  <div class = "metronome-settings">
+    <h1 class = "change-metronome"> Change Visual Metronome </h1>
+  </div>
+</body>
