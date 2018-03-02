@@ -18,11 +18,26 @@
 }
 
 .email, .password {
-  display:inline;
-  width:auto;
+  display: inline;
+  width: auto;
   outline: none;
 }
 
+.splash-options {
+  display: block;
+  vertical-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  float: center;
+  margin-bottom: 50px;
+}
+
+.signup {
+  float: center;
+}
 
 
 .mdl-card {

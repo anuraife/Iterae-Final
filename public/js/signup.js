@@ -14,21 +14,23 @@ function init(){
             signedIn = false;
         }
     });
-    
-	document.getElementById('log-in').addEventListener('click', logIn, false);
+
+	document.getElementById('sign-up').addEventListener('click', signUp, false);
 }
 
-function logIn() {
+
+function signUp() {
 	var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
-    if (verifyCredentials(email, password)){
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-            handleError(error);
+    var confirmPassword = document.getElementById('confirmPassword').value;
+    if (verifyNewCredentials(email, password, confirmPassword)){
+        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+          handleSignupError(error);
         });
     }
 }
 
-function verifyCredentials(email, password) {
+function verifyNewCredentials(email, password, confirmPassword) {
     console.log(email);
     if (email.length < 7) {
       alert('Please enter a valid email address.');
@@ -38,18 +40,22 @@ function verifyCredentials(email, password) {
       alert('Password must be at least 6 characters');
       return false;
     }
+    if (password !== confirmPassword) {
+      alert('Passwords do not match');
+      return false;
+    }
     return true;
 }
 
-function handleError(error) {
+function handleSignupError(error) {
     var errorCode = error.code;
     var errorMessage = error.message;
-    if (errorCode === 'auth/wrong-password') {
-      alert('Wrong password.');
-    } else {
-      alert(errorMessage);
-    }
+    alert(errorMessage);
     console.log(error);
+}
+
+function goBack() {
+    window.history.back();
 }
 
 window.onload = function() {

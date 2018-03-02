@@ -1,0 +1,59 @@
+.signup-container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.signup-logo {
+  width: 80px;
+  margin-top: 120px;
+  margin-bottom: 20px;
+}
+
+.signup-header {
+  margin-bottom: 60px;
+}
+
+.credentials {
+  display: block;
+  vertical-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.credentials-input {
+  float: center;
+  display: inline-block;
+  vertical-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.answer {
+  margin-bottom: 30px;
+  outline: none;
+}
+
+.level {
+  float: left;
+  margin-left: 13px;
+}
+
+
+.mdl-card {
+  overflow: visible;
+}
+.grecaptcha-logo {
+  background-color: white;
+}
+.mdl-grid {
+  max-width: 1024px;
+  margin: auto;
+}
+.mdl-layout__header-row {
+  padding: 0;
+}
