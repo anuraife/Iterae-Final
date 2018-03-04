@@ -1,20 +1,45 @@
+
+.page-wrap{
+  width: 1200px;
+  margin: auto;
+}
+
+
+.profile-button{
+  display: none;
+}
+
 .settings{
-  margin-left: 500px;
-  margin-top: 75px;
+  width: 500px;
+  /*margin-left: 500px;*/
+  /*margin-top: 75px;*/
 }
 .change-metronome{
-  margin-left: -75px;
+  /*margin-left: -75px;*/
+  float: left;
   color: #88bbd6;
 }
 .account-settings{
+  width: 500px;
+  float: left;
   color: #88bbd6;
 }
 .timesig{
   font-weight: bold;
 }
+
 .avatar{
   height: 75px; width: auto;
   margin-right: 15px;
   outline: none;
   display: inline-block;
+}
+
+.avatars{
+  float: left;
+}
+
+h1{
+  margin-top: 30px;
+  margin-bottom: 5px;
 }
