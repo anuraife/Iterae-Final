@@ -1,6 +1,6 @@
 var email = "";
-
-function init(){   
+var currMetronome = "metronome1";
+function init(){
   // Check if logged in
   firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
@@ -54,4 +54,16 @@ function resetPassword() {
 
 window.onload = function() {
     init();
+}
+function ChangeMetronome1(){
+  if (currMetronome != "metronome1"){
+  document.getElementById("metronome1").style.opacity = 1;
+  document.getElementById(currMetronome).style.opacity = 0.4;
+  currMetronome = "metronome1";}
+}
+function ChangeMetronome2(){
+  if (currMetronome != "metronome2"){
+  document.getElementById("metronome2").style.opacity = 1;
+  document.getElementById(currMetronome).style.opacity = 0.4;
+  currMetronome = "metronome2";}
 }
