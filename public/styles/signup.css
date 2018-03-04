@@ -21,6 +21,21 @@
   color: var(--maroon);
 }
 
+.avatar-container {
+  margin-bottom: 40px;
+}
+
+.avatar {
+  height: 50px;
+  width: auto;
+  margin-right: 15px;
+}
+
+.avatar-active {
+  border: 3px solid var(--dark-blue);
+  border-radius: 25px;
+}
+
 .credentials {
   display: block;
   vertical-align: center;
@@ -37,7 +52,7 @@
   justify-content: center;
   text-align: center;
   width: 300px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .answer {
@@ -49,7 +64,6 @@
   float: left;
   margin-left: 13px;
 }
-
 
 .mdl-card {
   overflow: visible;

@@ -22,23 +22,30 @@
 		<h3 class="signup-header">Sign Up</h3>
 		<p class="displayMessage" id="displayMessage"></p>
 		<div class="credentials">
+			<div class="avatar-container">
+				<img src="res/avatars/avatar0.png" alt="avatar" class="avatar" id="avatar0" onclick="selectAvatar(0)">
+		      	<img src="res/avatars/avatar1.png" alt="avatar" class="avatar" id="avatar1" onclick="selectAvatar(1)">
+		      	<img src="res/avatars/avatar2.png" alt="avatar" class="avatar" id="avatar2" onclick="selectAvatar(2)">
+		      	<img src="res/avatars/avatar3.png" alt="avatar" class="avatar" id="avatar3" onclick="selectAvatar(3)">
+		      	<img src="res/avatars/avatar4.png" alt="avatar" class="avatar" id="avatar4" onclick="selectAvatar(4)">
+		    </div>
 			<div class="credentials-input">
 				<input class="mdl-textfield__input answer" type="text" id="email" name="email" placeholder="Email"/>
 		        <input class="mdl-textfield__input answer" type="password" id="password" name="password" placeholder="Password"/>
 		        <input class="mdl-textfield__input answer" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password"/>
 		        <div class="answer">
 			        <p class="level">What's your skill level?</p>
-			        <select class="level" name="level">
-					  <option value="beginner">Beginner</option>
-					  <option value="intermediate">Intermediate</option>
-					  <option value="expert">Expert</option>
+			        <select class="level" name="level" id="level">
+					  <option value="0">Beginner</option>
+					  <option value="1">Intermediate</option>
+					  <option value="2">Expert</option>
 					</select>
 				</div>
 		    </div>
 		    <div class="signup-buttons">
 		        <button class="mdl-button mdl-js-button mdl-button--raised" id="log-in" name="signin" onclick="goBack()">Back</button>
 		        &nbsp;&nbsp;&nbsp;
-		        <button class="mdl-button mdl-js-button mdl-button--raised" id="sign-up" name="signup">Sign Up</button>
+		        <button class="mdl-button mdl-js-button mdl-button--raised" id="sign-up" name="signup">Sign Up</button> 
 		    </div>
 	      </div>
 	</div>

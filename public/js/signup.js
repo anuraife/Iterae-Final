@@ -1,6 +1,9 @@
+var avatarIndex = 1;
+
 function init(){
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
+            var userId = user.userId;
             var displayName = user.displayName;
             var email = user.email;
             var emailVerified = user.emailVerified;
@@ -9,13 +12,22 @@ function init(){
             var uid = user.uid;
             var providerData = user.providerData;
             signedIn = true;
+
+            savePreferences(uid, avatarIndex);
             window.location.href="index.html";
         } else {
             signedIn = false;
         }
     });
-
+    document.getElementById("avatar" + avatarIndex.toString()).classList.add("avatar-active")
 	document.getElementById('sign-up').addEventListener('click', signUp, false);
+}
+
+function selectAvatar(index) {
+    console.log(avatarIndex);
+    document.getElementById("avatar" + avatarIndex.toString()).classList.remove("avatar-active")
+    avatarIndex = index;
+    document.getElementById("avatar" + avatarIndex.toString()).classList.add("avatar-active")
 }
 
 
@@ -52,6 +64,15 @@ function handleSignupError(error) {
     var errorMessage = error.message;
     document.getElementById('displayMessage').innerHTML = errorMessage;
     console.log(error);
+}
+
+function savePreferences(uid, avatar) {
+  var levelId = document.getElementById("level")
+  var level = parseInt(levelId.options[levelId.selectedIndex].value)
+  firebase.database().ref('users/' + uid).set({
+    avatar: avatar,
+    level: level
+  });
 }
 
 function goBack() {

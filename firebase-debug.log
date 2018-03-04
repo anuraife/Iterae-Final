@@ -1,32 +1,32 @@
-[debug] [2018-03-01T07:58:57.525Z] ----------------------------------------------------------------------
-[debug] [2018-03-01T07:58:57.527Z] Command:       /usr/local/Cellar/node/9.5.0/bin/node /usr/local/bin/firebase serve
-[debug] [2018-03-01T07:58:57.527Z] CLI Version:   3.17.4
-[debug] [2018-03-01T07:58:57.527Z] Platform:      darwin
-[debug] [2018-03-01T07:58:57.527Z] Node Version:  v9.5.0
-[debug] [2018-03-01T07:58:57.527Z] Time:          Thu Mar 01 2018 01:58:57 GMT-0600 (CST)
-[debug] [2018-03-01T07:58:57.527Z] ----------------------------------------------------------------------
+[debug] [2018-03-04T00:42:22.079Z] ----------------------------------------------------------------------
+[debug] [2018-03-04T00:42:22.081Z] Command:       /usr/local/Cellar/node/9.5.0/bin/node /usr/local/bin/firebase serve
+[debug] [2018-03-04T00:42:22.081Z] CLI Version:   3.17.4
+[debug] [2018-03-04T00:42:22.081Z] Platform:      darwin
+[debug] [2018-03-04T00:42:22.081Z] Node Version:  v9.5.0
+[debug] [2018-03-04T00:42:22.081Z] Time:          Sat Mar 03 2018 18:42:22 GMT-0600 (CST)
+[debug] [2018-03-04T00:42:22.081Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-03-01T07:58:57.540Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-03-01T07:58:57.540Z] > authorizing via signed-in user
-[debug] [2018-03-01T07:58:57.541Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/iteraenu  
+[debug] [2018-03-04T00:42:22.094Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-04T00:42:22.094Z] > authorizing via signed-in user
+[debug] [2018-03-04T00:42:22.096Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/iteraenu  
   
- Thu Mar 01 2018 01:58:57 GMT-0600 (CST)
-[debug] [2018-03-01T07:58:57.856Z] <<< HTTP RESPONSE 200
-[debug] [2018-03-01T07:58:57.858Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/iteraenu/tokens  
+ Sat Mar 03 2018 18:42:22 GMT-0600 (CST)
+[debug] [2018-03-04T00:42:23.349Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-04T00:42:23.350Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/iteraenu/tokens  
   
- Thu Mar 01 2018 01:58:57 GMT-0600 (CST)
-[debug] [2018-03-01T07:58:58.242Z] <<< HTTP RESPONSE 200
+ Sat Mar 03 2018 18:42:23 GMT-0600 (CST)
+[debug] [2018-03-04T00:42:23.816Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/John/Iterae-Final'...
 [info] 
-[debug] [2018-03-01T07:58:58.247Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/iteraenu  
+[debug] [2018-03-04T00:42:23.822Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/iteraenu  
   
- Thu Mar 01 2018 01:58:58 GMT-0600 (CST)
-[debug] [2018-03-01T07:58:58.475Z] <<< HTTP RESPONSE 200
-[debug] [2018-03-01T07:58:58.476Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/522247821675/clients/_:getWebAppConfig  
+ Sat Mar 03 2018 18:42:23 GMT-0600 (CST)
+[debug] [2018-03-04T00:42:24.161Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-04T00:42:24.161Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/522247821675/clients/_:getWebAppConfig  
   
- Thu Mar 01 2018 01:58:58 GMT-0600 (CST)
-[debug] [2018-03-01T07:58:58.834Z] <<< HTTP RESPONSE 200
+ Sat Mar 03 2018 18:42:24 GMT-0600 (CST)
+[debug] [2018-03-04T00:42:24.613Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
 
