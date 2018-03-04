@@ -20,7 +20,7 @@ function init(){
           }
 
           document.getElementById('sign-out').addEventListener('click', signOut, false);
-          document.getElementById('resetPassword').addEventListener('click', resetPassword, false);
+          document.getElementById('reset-password').addEventListener('click', resetPassword, false);
       } else {
           signedIn = false;
           window.location.href="splash.html";
@@ -29,10 +29,12 @@ function init(){
 }
 
 function renderAvatar(uid) {
-  return firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
-    var avatarIndex = (snapshot.val() && snapshot.val().avatar) || 'Anonymous';
-    document.getElementById('avatar').src = "res/avatars/avatar" + avatarIndex + ".png"
-  });
+  // return firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+  //   var avatarIndex = (snapshot.val() && snapshot.val().avatar) || "Anonymous";
+  //   console.log(avatarIndex);
+  //   document.getElementById('avatar').src = "res/avatars/avatar" + avatarIndex + ".png"
+  // });
+  document.getElementById('avatar-pic').src = "res/avatars/avatar1.png";
 }
 
 function resetPassword() {

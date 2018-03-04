@@ -33,7 +33,8 @@
 
 .avatar-active {
   border: 3px solid var(--dark-blue);
-  border-radius: 25px;
+  border-radius: 35px;
+  height: 65px;
 }
 
 .credentials {

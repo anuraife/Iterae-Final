@@ -58,14 +58,19 @@
 	</div>
   <h1 class="username" id="username-header"></h1>
   <div class="settings">
-  	<img src="res/avatars/blankAvatar.png" alt="avatar" class="avatar" id="avatar">
+  	<div class = "avatar-container">
+  		<img src="res/avatars/blankAvatar.png" alt="avatar" class="avatar-pic" id="avatar-pic">
+  		<a class = "change-avatar"> Change Avatar </a>
+  	</div>
     <h1 class = "account-settings"> Account Settings </h1>
-    <label for="BPM"><b>Starting BPM</b></label>
+    <div class = "bpm-setting-wrapper"> 
+    <label for="BPM"><b>Default BPM</b></label>
       <input type="text" placeholder="Enter number 1-200" name="newBPM">
+     </div>
     <p class = "timesig"> Time Signature </p>
-    <input type="radio" name="timesignature" value="4/4" checked> 4/4<br>
-    <input type="radio" name="timesignature" value="6/8"> 6/8<br>
-    <button class="mdl-button mdl-js-button mdl-button--raised" id="resetPassword" name="verify-email">Send Password Reset Email</button>
+    <input type="radio" name="timesignature" value="4/4" checked> 4 / 4<br>
+    <input type="radio" name="timesignature" value="6/8"> 6 / 8<br>
+    <button class="mdl-button mdl-js-button mdl-button--raised" id="reset-password" name="verify-email">Send Password Reset Email</button>
   <div>
   <div class = "metronome-settings">
     <h1 class = "change-metronome"> Change Visual Metronome </h1>

@@ -4,15 +4,41 @@
   margin: auto;
 }
 
-
 .profile-button{
   display: none;
 }
 
+.avatar-container{
+  /*position: absolute;
+  left: 50px;
+  top: 50px;*/
+  margin-top: 50px;
+  width: 100px;
+}
+.change-avatar{
+  display: none;
+  position: relative;
+  left: 10px;
+  bottom: 45px;
+  font-size: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
+.avatar-pic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90px; width: auto;
+  /*margin-right: 15px;*/
+  outline: none;
+}
+
 .settings{
   width: 500px;
-  /*margin-left: 500px;*/
-  /*margin-top: 75px;*/
+  margin-left: 200px;
+  margin-top: 75px;
 }
 .change-metronome{
   /*margin-left: -75px;*/
@@ -20,19 +46,14 @@
   color: #88bbd6;
 }
 .account-settings{
+  margin-top: 20px;
+  padding-bottom: 5px;
   width: 500px;
   float: left;
   color: #88bbd6;
 }
 .timesig{
   font-weight: bold;
-}
-
-.avatar{
-  height: 75px; width: auto;
-  margin-right: 15px;
-  outline: none;
-  display: inline-block;
 }
 
 .avatars{
@@ -42,4 +63,25 @@
 h1{
   margin-top: 30px;
   margin-bottom: 5px;
+}
+
+#reset-password{
+  background-color: white;
+  border: 0.5px 0.5px 0.5px 0.5px gray;
+  margin: 1px 1px 1px 1px;
+  padding: 0;
+  font-family: Comfortaa;
+}
+
+
+.avatar-container:hover{
+  background-color: gray;
+}
+
+.avatar-container:hover .change-avatar{
+  display: block;
+}
+
+#reset-password:hover {
+  background-color: gray;
 }
