@@ -13,8 +13,7 @@ function init(){
             var providerData = user.providerData;
             signedIn = true;
 
-            savePreferences(uid, avatarIndex);
-            window.location.href="popup.html";;
+            savePreferences(uid);
         } else {
             signedIn = false;
         }
@@ -24,7 +23,6 @@ function init(){
 }
 
 function selectAvatar(index) {
-    console.log(avatarIndex);
     document.getElementById("avatar" + avatarIndex.toString()).classList.remove("avatar-active")
     avatarIndex = index;
     document.getElementById("avatar" + avatarIndex.toString()).classList.add("avatar-active")
@@ -66,13 +64,19 @@ function handleSignupError(error) {
     console.log(error);
 }
 
-function savePreferences(uid, avatar) {
-  var levelId = document.getElementById("level")
-  var level = levelId.options[levelId.selectedIndex].value
-  firebase.database().ref('users/' + uid).set({
-    avatar: avatar,
+function savePreferences(uid) {
+  var levelId = document.getElementById("level");
+  var level = levelId.options[levelId.selectedIndex].value;
+  var signup = firebase.database().ref('users/' + uid).set({
+    avatar: avatarIndex,
     level: level
-  });
+  }).then(function onSuccess(res) {
+    localStorage.setItem('avatar', avatarIndex);
+    window.location.href="popup.html";
+    }).catch(function onError(err) {
+      console.log(err);
+    });
+  console.log(uid);
 }
 
 function goBack() {

@@ -1,9 +1,9 @@
 var uid = user.uid;
 var selectedLevel = firebase.database().ref('/users/' + uid).then(function(snapshot){
-  bpm = (snapshot.val() && snapshot.val().bpm || 90;
+  bpm = (snapshot.val() && snapshot.val().bpm) || 90;
   firebase.database().ref('/users/' + uid).once('value').then(function(snapshot){
-  avatarIndex = (snapshot.val() && snapshot.val().avatar || 1;
-  bpm = (snapshot.val() && snapshot.val().bpm || 90;})
+  avatarIndex = (snapshot.val() && snapshot.val().avatar) || 1;
+  bpm = (snapshot.val() && snapshot.val().bpm) || 90;})
 });
 var clevel = document.getElementById('chosenlevel');
 var cbpm = document.getElementById('chosenbpm');
