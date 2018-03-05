@@ -22,6 +22,10 @@
   width: 700px;
 }
 
+.username-head{
+  display:none;
+}
+
 #username-header{
   margin-top: 60px;
 

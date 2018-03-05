@@ -81,6 +81,12 @@ li a {
   margin-right: 20px;
 }
 
+.profile-avatar{
+  width: 50px;
+  height: auto;
+}
+
+
 .sign-out {
   width: 95px;
   margin-right: 100px;
@@ -135,7 +141,7 @@ li a {
   background-color:#88bbd6;
   background : none;
   border: none;
-  margin: 0;
+  margin-left: 100px;
   padding: 0;
   font-family: Comfortaa;
 }
