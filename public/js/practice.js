@@ -26,7 +26,6 @@ function init() {
             var uid = user.uid;
             var providerData = user.providerData;
             signedIn = true;
-            document.getElementById('username').innerHTML = (email) ? email : "(No name)";
             document.getElementById('sign-out').addEventListener('click', signOut, false);
         } else {
             signedIn = false;

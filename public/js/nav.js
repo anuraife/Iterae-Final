@@ -10,13 +10,27 @@ function initNav() {
             var uid = user.uid;
             var providerData = user.providerData;
             signedIn = true;
-            document.getElementById('username').innerHTML = (email) ? email : "(No name)";
+            getAvatar(uid);
             document.getElementById('sign-out').addEventListener('click', signOut, false);
         } else {
             signedIn = false;
             window.location.href="splash.html";
         }
     });
+}
+
+function getAvatar(uid) {
+    var avatar = localStorage.getItem('avatar');
+    console.log(avatar);
+    if (avatar == null) {
+        firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+            var avatar = (snapshot.val() && snapshot.val().avatar) || 0;
+            localStorage.setItem('avatar', avatar);
+        });
+    }
+    
+    document.getElementById('nav-avatar').src = "res/avatars/avatar" + avatar + ".png"
+    console.log(avatar);
 }
 
 function signOut() {

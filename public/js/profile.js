@@ -30,11 +30,8 @@ function init(){
 }
 
 function renderAvatar(uid) {
-  return firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
-    var avatarIndex = (snapshot.val() && snapshot.val().avatar) || 'Blank';
-    console.log(avatarIndex);
-    document.getElementById('avatar-pic').src = "res/avatars/avatar" + avatarIndex + ".png"
-  });
+  var avatarIndex = localStorage.getItem('avatar');
+  document.getElementById('avatar-pic').src = "res/avatars/avatar" + avatarIndex + ".png";
 }
 
 function changeAvatar(){

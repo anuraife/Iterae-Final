@@ -27,9 +27,10 @@ function init(){
 }
 
 function renderSettings(uid) {
+  avatarIndex = localStorage.getItem('avatar');
+  document.getElementById("avatar" + avatarIndex.toString()).classList.add("avatar-active");
+  
   firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
-    avatarIndex = (snapshot.val() && snapshot.val().avatar) || 1;
-
     bpm = (snapshot.val() && snapshot.val().bpm) || 90;
     document.getElementById('bpm').text = bpm;
 
@@ -37,8 +38,6 @@ function renderSettings(uid) {
 
     metronome = (snapshot.val() && snapshot.val().metronome) || 0;
     changeMetronome(metronome);
-
-    document.getElementById("avatar" + avatarIndex.toString()).classList.add("avatar-active");
   });
 }
 
@@ -63,6 +62,7 @@ function saveSettings() {
     timeSig: timeSig,
     metronome: currMetronome
   });
+  localStorage.setItem('avatar', avatarIndex);
   document.getElementById("save-settings").innerHTML = "Saved";
 }
 
