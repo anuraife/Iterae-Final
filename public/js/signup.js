@@ -14,7 +14,7 @@ function init(){
             signedIn = true;
 
             savePreferences(uid, avatarIndex);
-            window.location.href="index.html";
+            window.location.href="popup.html";;
         } else {
             signedIn = false;
         }

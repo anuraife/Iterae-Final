@@ -1,0 +1,43 @@
+.recommendedlevel{
+  color:  #88bbd6;
+  position: absolute;
+  left: 400px;
+  top: 250px;
+}
+#chosenlevel{
+  position: absolute;
+  right: 400px;
+  top: 250px;
+}
+.recommendedbpm{
+  color:  #88bbd6;
+  position: absolute;
+  left: 400px;
+  top: 300px;
+}
+#chosenbpm{
+  position: absolute;
+  right: 400px;
+  top: 300px;
+}
+.custom-btn{
+  position: absolute;
+  left: 600px;
+  top: 370px;
+}
+.accept-btn{
+  position: absolute;
+  left: 700px;
+  top: 370px;
+}
+.signup-logo {
+  width: 80px;
+  margin-top: 120px;
+  margin-bottom: 20px;
+  margin-left: 75px;
+}
+.popup-container{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
