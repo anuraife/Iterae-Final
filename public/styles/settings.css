@@ -37,13 +37,9 @@
   height: 65px;
 }
 
-.metronome1{
+.metronome {
   width: 100px; height: auto;
   margin-left: 70px;
-}
-
-.metronome2{
-    width: 100px; height: auto;
-    margin-left: 70px;
-    opacity:0.4;
+  opacity: 0.4;
+  outline: none;
 }

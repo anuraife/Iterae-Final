@@ -4,7 +4,7 @@ var level;
 var avatarIndex;
 var bpm;
 var timeSig;
-var currMetronome = 1;
+var currMetronome = 0;
 
 function init(){
   // Check if logged in
@@ -53,7 +53,9 @@ function selectAvatar(index) {
 
 function changeMetronome(n) {
   if (currMetronome != n) {
-    document.getElementById("metronome" + currMetronome.toString()).style.opacity = 0.4;
+    if (currMetronome > 0) {
+      document.getElementById("metronome" + currMetronome.toString()).style.opacity = 0.4;
+    }
     currMetronome = n;
     document.getElementById("metronome" + currMetronome.toString()).style.opacity = 1;
   }

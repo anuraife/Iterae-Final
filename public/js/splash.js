@@ -34,10 +34,6 @@ function verifyCredentials(email, password) {
       displayMessage.innerHTML = 'Please enter a valid email address.';
       return false;
     }
-    if (password.length < 6) {
-      displayMessage.innerHTML = 'Password must be at least 6 characters';
-      return false;
-    }
     return true;
 }
 
