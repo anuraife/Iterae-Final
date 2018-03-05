@@ -70,7 +70,10 @@ function savePreferences(uid, email) {
   var signup = firebase.database().ref('users/' + uid).set({
     username: email,
     avatar: avatarIndex,
-    level: level
+    level: level,
+    bpm: 90,
+    timeSig: "4/4",
+    metronome: 1
   }).then(function onSuccess(res) {
     localStorage.setItem('avatar', avatarIndex);
     window.location.href="popup.html";
