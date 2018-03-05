@@ -2,7 +2,7 @@ var uid;
 var avatarIndex;
 var bpm;
 var timeSig;
-var currMetronome = 0;
+var currMetronome = 1;
 
 function init(){
   // Check if logged in
@@ -36,7 +36,7 @@ function renderSettings(uid) {
 
     timeSig = (snapshot.val() && snapshot.val().timeSig) || "4/4";
 
-    metronome = (snapshot.val() && snapshot.val().metronome) || 0;
+    metronome = (snapshot.val() && snapshot.val().metronome) || 1;
     changeMetronome(metronome);
   });
 }
