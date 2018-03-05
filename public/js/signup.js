@@ -13,7 +13,7 @@ function init(){
             var providerData = user.providerData;
             signedIn = true;
 
-            savePreferences(uid);
+            savePreferences(uid, email);
         } else {
             signedIn = false;
         }
@@ -64,10 +64,11 @@ function handleSignupError(error) {
     console.log(error);
 }
 
-function savePreferences(uid) {
+function savePreferences(uid, email) {
   var levelId = document.getElementById("level");
   var level = levelId.options[levelId.selectedIndex].value;
   var signup = firebase.database().ref('users/' + uid).set({
+    username: email,
     avatar: avatarIndex,
     level: level
   }).then(function onSuccess(res) {

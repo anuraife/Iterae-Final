@@ -14,7 +14,7 @@ function init(){
           var providerData = user.providerData;
           signedIn = true;
 
-          renderAvatar(uid);
+          renderProfile(uid);
           if (email) {
             document.getElementById('username').innerHTML = email;
             document.getElementById('username-header').innerHTML = email;
@@ -29,9 +29,15 @@ function init(){
   });
 }
 
-function renderAvatar(uid) {
+function renderProfile(uid) {
   var avatarIndex = localStorage.getItem('avatar');
   document.getElementById('avatar-pic').src = "res/avatars/avatar" + avatarIndex + ".png";
+
+  firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+    var level = (snapshot.val() && snapshot.val().level) || "Unknown";
+    var levelStr = level.charAt(0).toUpperCase() + level.slice(1);
+    document.getElementById('skill-value').innerHTML = levelStr;
+  });
 }
 
 function changeAvatar(){
