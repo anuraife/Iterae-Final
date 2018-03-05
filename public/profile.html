@@ -38,10 +38,10 @@
 							Your Profile
 						</button>
 					</a>
-		    		<a href="#">
+		    		<a href="settings.html">
 		    			<button class = "options-select-button"
 							onclick="console.log('Test2')">
-							Test2
+							Settings
 						</button>
 		    		</a>
 		    		<a href="#">
@@ -56,27 +56,34 @@
 	</ul>
 	<a href="#profile"><img src="res/user_icon.svg" alt="Profile" class="profile-icon"></a>
 	</div>
-  <h1 class="username" id="username-header"></h1>
-  <div class="settings">
+
+	<h1 class = "your-profile"> Your Profile </h1>
   	<div class = "avatar-container">
   		<img src="res/avatars/blankAvatar.png" alt="avatar" class="avatar-pic" id="avatar-pic">
-  		<button class = "change-avatar"> Change Avatar </button>
+  		<button class = "change-avatar" onclick = "console.log('yo')"> Change Avatar </button>
   	</div>
-    <h1 class = "account-settings"> Account Settings </h1>
-    <div class = "bpm-setting-wrapper">
-    <label for="BPM"><b>Default BPM</b></label>
-      <input type="text" placeholder="Enter number 1-200" name="newBPM">
-     </div>
-    <p class = "timesig"> Time Signature </p>
-    <input type="radio" name="timesignature" value="4/4" checked> 4 / 4<br>
-    <input type="radio" name="timesignature" value="6/8"> 6 / 8<br>
-    <button class="mdl-button mdl-js-button mdl-button--raised" id="reset-password" name="verify-email">Send Password Reset Email</button>
-  <div>
-  <div class = "metronome-settings">
-    <h1 class = "change-metronome"> Change Visual Metronome </h1>
-    <input type="image" src="res/metronome/metro_1/metronome.png"  alt="Metronome 1" class="metronome1" id="metronome1" onclick="ChangeMetronome1()">
-    <input type="image" src="res/metronome/metro_2/box_metro5.png"  alt="Metronome 2" class="metronome2" id="metronome2" onclick="ChangeMetronome2()">
+
+  <div class="your-profile-wrapper">
+  	
+  	<div class = "user-info">
+  		<a class = "user"> User: </a>
+  		<a class = "username" id="username-header"></a>
+  	</div>
+  	
+	<div class = "skill-container">
+  		<a class = "current-skill-level"> Skill Level: </a>
+  		<a class = "skill-value"> Beginner </a>
+  	</div>
+
+  	<div class = "joined-container">
+  		<a class = "joined"> Joined: </a>
+  		<a class = "joined-date"> March 4th, 2018 </a>
+  	</div>
+  	
+  	<button class="but" id="reset-password" name="verify-email">Change Password</button>
   </div>
+    
+
 </body>
 
-</div>
+</html>

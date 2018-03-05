@@ -1,0 +1,33 @@
+.settings{
+  width: 500px;
+  margin-left: 200px;
+  margin-top: 75px;
+}
+.change-metronome{
+  /*margin-left: -75px;*/
+  float: left;
+  color: #88bbd6;
+}
+.account-settings{
+  margin-top: 160px;
+  padding-bottom: 5px;
+  width: 500px;
+  float: left;
+  color: #88bbd6;
+}
+.timesig{
+  font-weight: bold;
+}
+
+.avatars{
+  float: left;
+}
+
+.metronome1{
+  width: 100px; height: auto;
+  margin-left: 70px;}
+.metronome2{
+    width: 100px; height: auto;
+    margin-left: 70px;
+    opacity:0.4;
+}
