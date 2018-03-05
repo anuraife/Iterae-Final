@@ -212,3 +212,23 @@
 .footerLink:hover {
   background-color: rgba(60, 60, 60, 0.8);
 }
+
+.but {
+  position: relative;
+  top: 20px;
+  /*left: 30px;*/
+  width: 200px;
+  height: 45px;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: #88bbd6;
+  /*border: 0.5px 0.5px 0.5px 0.5px gray;*/
+  /*margin: 1px 1px 1px 1px;*/
+  padding: 0;
+  border: none;
+  font-family: Comfortaa;
+}
+
+.but:hover {
+  background-color: gray;
+}

@@ -68,7 +68,7 @@ function handleSignupError(error) {
 
 function savePreferences(uid, avatar) {
   var levelId = document.getElementById("level")
-  var level = parseInt(levelId.options[levelId.selectedIndex].value)
+  var level = levelId.options[levelId.selectedIndex].value
   firebase.database().ref('users/' + uid).set({
     avatar: avatar,
     level: level

@@ -1,15 +1,24 @@
 .settings{
   width: 500px;
   margin-left: 200px;
+<<<<<<< Updated upstream
+=======
+  margin-top: 50px;
+>>>>>>> Stashed changes
 }
+
 .change-metronome{
   /*margin-left: -75px;*/
   float: left;
   color: #88bbd6;
 }
+
 .account-settings{
+<<<<<<< Updated upstream
   margin-top: 50px;
   margin-bottom: 20px;
+=======
+>>>>>>> Stashed changes
   padding-bottom: 5px;
   width: 500px;
   float: left;
@@ -19,13 +28,27 @@
   font-weight: bold;
 }
 
-.avatars{
-  float: left;
+.avatar-container {
+  margin-bottom: 40px;
+}
+
+.avatar {
+  height: 50px;
+  width: auto;
+  margin-right: 15px;
+}
+
+.avatar-active {
+  border: 3px solid var(--dark-blue);
+  border-radius: 35px;
+  height: 65px;
 }
 
 .metronome1{
   width: 100px; height: auto;
-  margin-left: 70px;}
+  margin-left: 70px;
+}
+
 .metronome2{
     width: 100px; height: auto;
     margin-left: 70px;
