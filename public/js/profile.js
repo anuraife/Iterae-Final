@@ -1,4 +1,5 @@
 var email = "";
+var avatarOpen = false;
 var currMetronome = "metronome1";
 function init(){
   // Check if logged in
@@ -36,6 +37,23 @@ function renderAvatar(uid) {
   // });
   document.getElementById('avatar-pic').src = "res/avatars/avatar1.png";
 }
+
+function changeAvatar(){
+  console.log('yo');
+  if(!avatarOpen){
+    document.getElementById('avatar-popup-container').style.display = 'block';
+
+  }
+  else{
+    document.getElementById('avatar-popup-container').style.display = 'none';
+  }
+  avatarOpen = !avatarOpen;
+}
+
+function selectAvatar(avatarIndex){
+  document.getElementById('avatar-pic').src = "res/avatars/avatar" + avatarIndex + ".png"
+}
+
 
 function resetPassword() {
   firebase.auth().sendPasswordResetEmail(email).then(function() {
