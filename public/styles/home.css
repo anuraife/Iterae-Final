@@ -7,18 +7,18 @@
 
 .levels-wrapper{
     position: absolute;
-    top: 150px;
-    left: 150px;
-    width: 250px;
+    top: 100px;
+    margin-left: 100px;
+    width: 400px;
 }
 
 .accordion {
     background-color: var(--dark-blue);
     cursor: pointer;
     padding: 25px;
-    width: 500px;
+    width: 450px;
     border: grey;
-    margin: 15px 15px 15px 15px;
+    margin: 15px 15px 15px 0px;
     text-align: left;
     outline: none;
     font-size: 25px;
@@ -26,6 +26,8 @@
     float: top;
     color: white;
     font-family: Comfortaa;
+    border-radius: 10px;
+
 }
 
 .active, .accordion:hover {
@@ -58,30 +60,65 @@ a.scale:active {
 
 .sidebar-wrapper{
   position: absolute;
-  left: 1350px;
-  top: 675px;
+  top: 115px;
+  right: 100px;
+  width: 450px;
+  float: right;
   display: inline-block;
 }
 
 .sidebar-text {
   text-align: left;
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.streak-wrapper {
+  float: right;
+  width: 400px; height: 115px;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: var(--light-grey);
+}
+.streaktext {
+  margin-left: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.streak {
+  height: 50px; width: auto;
+  outline: none;
+  margin-left: 20px;
+  display: inline-block;
 }
 
 .badge-wrapper {
-  position: absolute;
-  right: 85px; bottom: 230px;
-  height: 130px; width: 450px;
-  float: left;
+  margin-top: 30px;
+  height: 125px; width: 400px;
+  float: right;
+  border-radius: 10px;
   display: inline-block;
-  padding-top: 20px;
   background-color: var(--light-grey);
 }
 
+.announcements-wrapper{
+  margin-top: 30px;
+  width: 400px; height: 145px;
+  font-size: 20px;
+  float: right;
+  border-radius: 10px;
+  background-color: var(--light-grey);
+}
+.announcebold {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .badge {
-  height: 75px; width: auto;
-  margin-left: 17px;
+  height: 60px; width: auto;
+  margin-left: 27px;
   outline: none;
   display: inline-block;
 }
@@ -115,21 +152,4 @@ a.scale:active {
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
-
-.streak-wrapper {
-  position: absolute;
-  right:85px; bottom: 400px;
-  padding-top: 10px;
-  float:left;
-  width: 450px; height: 100px;
-  display: inline-block;
-  background-color: var(--light-grey);
-}
-.announcements-wrapper{
-  position: absolute;
-  right: 85px; bottom: 60px;
-  width: 450px;
-  font-size: 20px;
-  background-color: var(--light-grey);
 }

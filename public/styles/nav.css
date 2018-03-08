@@ -9,15 +9,14 @@ h1, h2, h3, body {
 .nav {
     padding: 10px 0px;
     overflow: visible;
-    background-color: #efefef;
+    background-color: var(--dark-blue);
     height: 50px;
-    
 }
 
 .logo {
     width: 50px;
     height: 50px;
-    margin-left: 200px;
+    margin-left: 100px;
     margin-right: 50px;
     float: left;
 }
@@ -41,7 +40,8 @@ li a {
 }
 
 .nav a:hover {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
+    background-color: var(--light-blue)
 }
 
 .profile-button {
@@ -77,26 +77,32 @@ li a {
 
 .username {
   color: var(--grey);
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .profile-avatar {
-  width: 30px;
+  width: 40px;
   height: auto;
+  margin-top: 5px;
 }
 
 
 .sign-out {
   width: 95px;
   margin-right: 100px;
-  padding: 10px 15px;
-  background-color: var(--dark-blue);
+  padding: 10px 10px;
+  background-color: var(--light-blue);
   /*background-color: blue;*/
   cursor: pointer;
   border: grey;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: 0.4s;
-  color: white;
+  /* color: white; */
+  text-align: center;
+  margin-top: 6px;
+}
+.sign-out a:hover {
+    background-color: #f9f9f9;
 }
 
 .nav .menu-icon {
@@ -188,4 +194,3 @@ li a {
     background-color: #caebf2;
     color: black;
 }
-
