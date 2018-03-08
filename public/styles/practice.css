@@ -12,7 +12,7 @@
 	font-size: 50px;
   	float:center;
 	margin-left:350px;
-	margin-top: 20px;
+	margin-top: 45px;
 }
 
 #scale-notes {
@@ -35,6 +35,7 @@
 #scale-dropbtn{
 	font-size: 35px;
 	background-color:#88bbd6;
+	border-radius: 10px;
 }
 
 #scale-dropdown{
@@ -221,8 +222,8 @@ h2 {
 }
 
 #key-dropdown{
-	left: 75px;
-	top: 85px;
+	left: 100px;
+	top: 115px;
 	position: absolute;
 
 }
@@ -232,6 +233,7 @@ h2 {
 	padding: 20px;
   font-size: 35px;
 	color:white;
+	border-radius: 10px;
 }
 
 .dropbtn {

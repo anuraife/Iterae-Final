@@ -10,7 +10,7 @@
 	background-color: white;
 	position: absolute;
 	left: 200px;
-	top: 375px;
+	top: 390px;
 }
 .BPM-wrapper{
   position: absolute;
@@ -154,7 +154,7 @@ table.scaleTable {
   border: 0px solid #000000;
   width: 100%;
   text-align: center;
-	margin-top: 45px;
+	/* margin-top: 45px; */
 }
 table.scaleTable td, table.scaleTable th {
   border: 1px solid #EEEEEE;
