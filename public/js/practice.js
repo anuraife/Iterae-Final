@@ -138,6 +138,17 @@ function clearer() {
 	count = 0;
 }
 
+function changeKey(key){
+	document.getElementById('scale-notes').src='res/scales/' + key + '_major.png';
+	document.getElementById('key-name').innerHTML = key.toUpperCase();
+}
+
+function changeScale(level){
+	if(level == "beg"){
+		document.getElementById("beginner-scale-container").style.visibility = 'visible';
+	}
+}
+
 function signOut() {
     if (firebase.auth().currentUser) {
         firebase.auth().signOut();

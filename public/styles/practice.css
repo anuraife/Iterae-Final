@@ -19,7 +19,7 @@
 	display: block;
     margin-left: auto;
     margin-right: 100px;
-		margin-top: 350px;
+	margin-top: 350px;
 	width: 800px; height: auto;
 }
 
@@ -33,37 +33,44 @@
 }
 
 #scale-dropbtn{
-	font-size: 35px;
 	background-color:#88bbd6;
+	padding: 20px;
+  	font-size: 35px;
+	color:white;
 	border-radius: 10px;
+
 }
 
 #scale-dropdown{
-	float: right;
-	margin-top: -500px;
-	margin-right: 20px;
-	width: 100px;
+	left: 1300px;
+	top: 115px;
+	position: absolute;
+	float: left;
+	width: 140px;
 }
 
 .scale-dropdown-content {
-	right: 0;
+	float: right;
     display: none;
     background-color: #f1f1f1;
-    width: 400px;
+    width: 200px;
     box-shadow: 0px 6px 14px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .scale-dropdown-content a {
+	float: right;
 	right: 0;
     color: black;
     padding: 8px 16px;
     text-decoration: none;
     display: block;
+    width: 95px;
 }
 
-.scale-dropdown-content p:hover
-{background-color: #ddd}
+.scale-dropdown-content p:hover .level-select-button{
+	background-color: #ddd;
+}
 
 
 #intermediate-scale-container{
@@ -72,6 +79,7 @@
 	width: 500px;
 	vertical-align: text-bottom;
 	float: right;
+	text-align: right;
 	margin-top: -520px;
 	margin-right: -190px;
 }
@@ -209,10 +217,11 @@ h2 {
 }
 
 .level-select-button{
+	float: right;
 	background : none;
 	border: none;
 	margin: 0;
-	padding: 0;
+	padding: 3px 4px 3px 4px;
 	font-family: Comfortaa;
 }
 
@@ -231,7 +240,7 @@ h2 {
 #key-dropbtn{
 	background-color:#88bbd6;
 	padding: 20px;
-  font-size: 35px;
+  	font-size: 35px;
 	color:white;
 	border-radius: 10px;
 }
@@ -289,6 +298,8 @@ h2 {
 #scale-dropdown:hover .scale-dropdown-content {
     display: block;
 }
+
+
 
 #scale-dropdown:hover #scale-dropbtn {
     background-color: #caebf2;

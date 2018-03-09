@@ -73,7 +73,7 @@
 			</div>
 		</div>
 
-		<div class = "selected-level" id = "beginner-scale-container">
+		<div class = "other-level" id = "beginner-scale-container">
 			<button id = "scale1" class = "beg selected scaleInBar"> Major </button>
 			<a id = "div1" class = "divider"> / </a>
 			<button id = "scale2" class = "beg other scaleInBar"> Minor </button>
@@ -89,15 +89,15 @@
 			<button id = "scale4" class = "int other scaleInBar"> Pentatonic </button>
 		</div>
 
-		<!-- For the purpose of the depth of this prototype, the expert level has not yet been implemented -->
+		
 		<div class = "other-level" id = "expert-scale-container">
-			<button id = "exp-scale1" class = "selected scaleInBar"> Test </button>
+			<button id = "exp-scale1" class = "expert selected scaleInBar"> Ionian </button>
 			<a id = "div1" class = "divider"> / </a>
-			<button id = "exp-scale2" class = "other scaleInBar">  Test </button>
+			<button id = "exp-scale2" class = "expert other scaleInBar">  Test </button>
 			<a id = "div2" class = "divider"> / </a>
-			<button id = "exp-scale3" class = "other scaleInBar"> Test </button>
+			<button id = "exp-scale3" class = "expert other scaleInBar"> Test </button>
 			<a id = "div3" class = "divider"> / </a>
-			<button id = "exp-scale4" class = "other scaleInBar"> Test </button>
+			<button id = "exp-scale4" class = "expert other scaleInBar"> Test </button>
 		</div>
 
 		<div class="metronome-container">
@@ -120,10 +120,10 @@
 
 		<div id = "scale-dropdown" class = "dropdown">
 			<button id = "scale-dropbtn" class = "dropbtn">
-				      <i id = "drop-arrow" class="material-icons">expand_more</i>
-			 </button>
+			Scale
+			</button>
 			<div class="scale-dropdown-content">
-				<p><button class = "level-select-button" id = "beginner-scale-select">
+				<p><button class = "level-select-button" id = "beginner-scale-select" onclick = "changeScale('beg')">
 					Major/Minor
 				</button></p>
     			<p><button class = "level-select-button" id = "intermediate-scale-select">
@@ -139,13 +139,13 @@
 	  			<div class="dropdown-content">
 						<a href="#">
 							<button class = "key-select-button"
-							onclick="document.getElementById('scale-notes').src='res/scales/c_major.png'">
+							onclick="changeKey('c')">
 								C
 							</button>
 						</a>
 		    		<a href="#">
 		    			<button class = "key-select-button"
-							onclick="document.getElementById('scale-notes').src='res/scales/g_major.png'">
+							onclick="changeKey('g')">
 								G
 							</button>
 		    		</a>
