@@ -1,5 +1,5 @@
 .page-wrap{
-	width: 1200px;
+	width: 1000px;
 	margin: 0 auto;
 }
 
@@ -42,7 +42,7 @@
 }
 
 #scale-dropdown{
-	left: 1300px;
+	right: 100px;
 	top: 115px;
 	position: absolute;
 	float: left;

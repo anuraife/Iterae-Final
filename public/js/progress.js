@@ -9,9 +9,9 @@ var BadgeArray = [
     "Beethoven Badge"
 ]
 
-var poorColor = "#ff3d43";
-var goodColor = "#f9eb52";
-var greatColor = "#67934b";
+var poorColor = "#e9e9f0";
+var goodColor = "#FFF5EE";
+var greatColor = "#7BCCB5";
 
 var colorMapping = [poorColor, goodColor, greatColor];
 
@@ -19,7 +19,7 @@ var keyMapping = ["C", "C#-Db", "D", "D#-Eb", "E", "F", "F#-Gb", "G", "G#-Ab", "
 var scaleMapping = ["Major", "Minor", "Harmonic", "Melodic", "Chromatic", "Pentatonic",
                     "Ionian", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aeolian", "Locrian"];
 
-function init(){   
+function init(){
     // Check if logged in
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {

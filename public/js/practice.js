@@ -55,7 +55,7 @@ function metronome() {
 // Select the button with corresponding id
 function selectRhythm(id) {
 	document.getElementById(id).style.color = "white";
-	document.getElementById(id).style.backgroundColor = "green";
+	document.getElementById(id).style.backgroundColor = '#88bbd6';
 }
 
 // Deselect the button with corresponding id
@@ -156,6 +156,6 @@ function signOut() {
     }
 }
 
-window.onload = function() {	
+window.onload = function() {
 	init();
 }
