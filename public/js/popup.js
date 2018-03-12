@@ -26,5 +26,5 @@ function onload() {
 }
 
 window.onload = function () {
-  onload()
+  onload();
 }
