@@ -1,30 +1,26 @@
-var uid = user.uid;
-var selectedLevel = firebase.database().ref('/users/' + uid).then(function(snapshot){
-  bpm = (snapshot.val() && snapshot.val().bpm) || 90;
-  firebase.database().ref('/users/' + uid).once('value').then(function(snapshot){
-  avatarIndex = (snapshot.val() && snapshot.val().avatar) || 1;
-  bpm = (snapshot.val() && snapshot.val().bpm) || 90;})
-});
-var clevel = document.getElementById('chosenlevel');
-var cbpm = document.getElementById('chosenbpm');
-function init(){
-  // var selectedLevel = document.getElementById('level').selectedIndex;
-  if (selectedLevel=="0")
-  {
-    clevel.innerHTML = "Beginner";
-    cbpm.innerHTML = "100";
+// function getURLParameter(name) {
+//   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+// }
+function onload() {
+  // data = getURLParameter('level');
+  // console.log(data);
+  var parsedURL = new URL(window location.href);
+  var level = parsedURL.searchParams.get("level");
+  console.log(level);
   }
-  if (selectedLevel=="1")
+  if (data.level == 0)
   {
-    clevel.innerHTML = "Intermediate";
-    cbpm.innerHTML = "150";
+      document.getElementById('chosenlevel') = "Beginner";
+      document.getElementById('chosenbpm') = "100";
   }
-  if (selectedLevel=="2")
+ if (data.level==1)
   {
-    clevel.innerHTML = "Expert";
-    cbpm.innerHTML = "180";
+    document.getElementById('chosenlevel') = "Intermediate";
+    document.getElementById('chosenbpm') = "150";
   }
-}
-window.onload = function(){
-  init();
+  if (data.level==2)
+   {
+     document.getElementById('chosenlevel') = "Expert";
+     document.getElementById('chosenbpm') = "180";
+   }
 }
