@@ -4,6 +4,7 @@
 function onload() {
   // data = getURLParameter('level');
   // console.log(data);
+
   var parsedURL = new URL(window location.href);
   var level = parsedURL.searchParams.get("level");
   console.log(level);
@@ -23,4 +24,8 @@ function onload() {
      document.getElementById('chosenlevel') = "Expert";
      document.getElementById('chosenbpm') = "180";
    }
+}
+
+window.onload = function () {
+  onload()
 }
