@@ -1,9 +1,4 @@
-// function getURLParameter(name) {
-//   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
-// }
 function onLoad() {
-  // data = getURLParameter('level');
-  // console.log(data);
   var parsedURL = new URL(window.location.href);
   var level = parsedURL.searchParams.get("level");
   if (level == 0)

@@ -11,14 +11,14 @@
 .scale-header {
 	font-size: 50px;
   	float:center;
-	margin-left:350px;
+	margin-left:275px;
 	margin-top: 45px;
 }
 
 #scale-notes {
 	display: block;
     margin-left: auto;
-    margin-right: 100px;
+    margin-right: 150px;
 	margin-top: 350px;
 	width: 800px; height: auto;
 }

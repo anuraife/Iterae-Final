@@ -10,7 +10,7 @@
 	background-color: white;
 	position: absolute;
 	left: 200px;
-	top: 390px;
+	top: 330px;
 }
 .BPM-wrapper{
   position: absolute;
@@ -108,7 +108,7 @@
 .legend-container {
   position: absolute;
   left: 190px;
-  top: 340px;
+  top: 280px;
   align-items: center;
   justify-content: center;
   text-align: center;

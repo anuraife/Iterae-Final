@@ -87,11 +87,6 @@ function savePreferences(uid, email) {
 function goBack() {
     window.history.back();
 }
-// function testJS() {
-//   var b = document.getElementById('level').selectedIndex,
-//   url = 'https://pavel-kleyner.github.io/Iterae-Final/public/popup.html?level=' + encodeURIComponent(b);
-//   document.location.href = url;
-// }
 window.onload = function() {
     init();
 }

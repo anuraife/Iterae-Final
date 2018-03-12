@@ -1,3 +1,4 @@
+@import 'colors.css';
 .page-wrap{
 	width: 1200px;
 	margin: 0 auto;
@@ -14,44 +15,111 @@
 
 .BPM-wrapper{
   position: absolute;
-  left: 75px; top: 100px;
-  width: 475px;
-  font-size: 20px;
+  left: 100px; top: 115px;
+  background-color: var(--light-grey);
+  width: 380px;
+  font-size: 15px;
+	border-radius: 10px;
 	text-align:center;
 }
-
+#bold {
+	font-size: 20px;
+	font-weight: bold;
+}
 .Accuracy-wrapper{
   position: absolute;
-  left: 75px; top: 185px;
-  width: 475px;
-  font-size: 20px;
+  left: 100px; top: 200px;
+  background-color: var(--light-grey);
+  width: 380px;
+  font-size: 15px;
+	border-radius: 10px;
 	text-align:center;
 }
 
-.badge-wrapper {
-	position: absolute;
-  right:30px; top: 100px;
-  height: 130px; width: 670px;
+.badge-wrapper-progress {
+  position: absolute;
+  right:100px; top: 115px;
+  height: 121px; width: 670px;
   float: left;
   display: inline-block;
 	padding-top: 17px;
+	border-radius: 10px;
+  background-color: var(--light-grey);
 }
 
+.badge-wrapper {
+  position: absolute;
+  right:80px; bottom: 350px;
+  height: 180px; width: 600px;
+  float: left;
+  display: inline-block;
+  background-color: var(--light-grey);
+}
+
+.badge {
+
+  height: 70px; width: auto;
+	margin-top: 5px;
+  margin-left: 16.5px;
+  outline: none;
+  display: inline-block;
+}
+
+.badge:hover{
+  filter: grayscale(1);
+}
+
+.sidebar-text {
+  text-align: left;
+  font-size: 15px;
+  margin-left: 20px;
+	margin-bottom: 10px;
+}
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0px 15px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 .key-select{
 	position: absolute;
 	top: 320px;
-	left: 920px;
+	left: 885px;
 }
 .scale-select{
 	position: absolute;
 	top: 320px;
-	left: 1000px;
+	left: 955px;
 
 }
 .progress-select{
 	position: absolute;
 	top: 320px;
-	left: 1142px;
+	left: 1055px;
 }
 .go{
   position: absolute;
@@ -63,7 +131,7 @@
 	color: white;
 	position: absolute;
 	top: 365px;
-	left: 920px;
+	left:1050px;
 }
 .go:hover{
 	background-color: #caebf2;
@@ -80,6 +148,7 @@
 	border: 0.5px solid #52658f;
   font-family: Comfortaa;
   font-size: 15px;
+	max-width: 90px;
 }
 .progress-select select {
 	padding: 7px;
@@ -87,18 +156,17 @@
   font-family: Comfortaa;
   font-size: 15px;
 }
-
 .main-progress{
   position: absolute;
   top: 365px;
-  left: 1050px;
+  left: 885px;
 
 }
 a.main:link, a.main:visited {
     height: 24px;
     position: absolute;
     background-color: #88bbd6;
-    width: 200px;
+    width: 150px;
     color: white;
     padding: 7px 0px 0px 0px;
     font-size: 15px;
