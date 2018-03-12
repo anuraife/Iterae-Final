@@ -4,7 +4,6 @@
 function onLoad() {
   // data = getURLParameter('level');
   // console.log(data);
-  console.log(test);
   var parsedURL = new URL(window.location.href);
   var level = parsedURL.searchParams.get("level");
   console.log(level);
