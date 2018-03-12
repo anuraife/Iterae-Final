@@ -8,7 +8,6 @@ function onload() {
   var parsedURL = new URL(window.location.href);
   var level = parsedURL.searchParams.get("level");
   console.log(level);
-  }
   if (data.level == 0)
   {
       document.getElementById('chosenlevel') = "Beginner";
