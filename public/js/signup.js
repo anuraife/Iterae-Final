@@ -76,7 +76,8 @@ function savePreferences(uid, email) {
     metronome: 1
   }).then(function onSuccess(res) {
     localStorage.setItem('avatar', avatarIndex);
-    window.location.href="popup.html";
+    var b = document.getElementById('level').selectedIndex,
+    window.location.href="popup.html?level="+ encodeURIComponent(b);;
     }).catch(function onError(err) {
       console.log(err);
     });
@@ -86,11 +87,11 @@ function savePreferences(uid, email) {
 function goBack() {
     window.history.back();
 }
-function testJS() {
-  var b = document.getElementById('level').selectedIndex,
-  url = 'https://pavel-kleyner.github.io/Iterae-Final/public/popup.html?level=' + encodeURIComponent(b);
-  document.location.href = url;
-}
+// function testJS() {
+//   var b = document.getElementById('level').selectedIndex,
+//   url = 'https://pavel-kleyner.github.io/Iterae-Final/public/popup.html?level=' + encodeURIComponent(b);
+//   document.location.href = url;
+// }
 window.onload = function() {
     init();
 }
