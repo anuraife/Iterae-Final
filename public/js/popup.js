@@ -1,7 +1,7 @@
 // function getURLParameter(name) {
 //   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
 // }
-function onload() {
+function onLoad() {
   // data = getURLParameter('level');
   // console.log(data);
   console.log(test);
@@ -10,21 +10,17 @@ function onload() {
   console.log(level);
   if (data.level == 0)
   {
-      document.getElementById('chosenlevel') = "Beginner";
-      document.getElementById('chosenbpm') = "100";
+      document.getElementById('chosenlevel').innerHTML = "Beginner";
+      document.getElementById('chosenbpm').innerHTML = "100";
   }
  if (data.level==1)
   {
-    document.getElementById('chosenlevel') = "Intermediate";
-    document.getElementById('chosenbpm') = "150";
+    document.getElementById('chosenlevel').innerHTML = "Intermediate";
+    document.getElementById('chosenbpm').innerHTML = "150";
   }
   if (data.level==2)
    {
-     document.getElementById('chosenlevel') = "Expert";
-     document.getElementById('chosenbpm') = "180";
+     document.getElementById('chosenlevel').innerHTML = "Expert";
+     document.getElementById('chosenbpm').innerHTML = "180";
    }
-}
-
-window.onload = function () {
-  onload();
 }
