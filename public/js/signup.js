@@ -76,8 +76,8 @@ function savePreferences(uid, email) {
     metronome: 1
   }).then(function onSuccess(res) {
     localStorage.setItem('avatar', avatarIndex);
-    var b = document.getElementById('level').selectedIndex,
-    window.location.href="popup.html?level="+ encodeURIComponent(b);;
+    var b = document.getElementById('level').selectedIndex;
+    window.location.href="popup.html?level="+ encodeURIComponent(b);
     }).catch(function onError(err) {
       console.log(err);
     });
