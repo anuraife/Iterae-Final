@@ -10,7 +10,8 @@
 	background-color: white;
   box-shadow: 2px 2px 2px 2px grey;
 	position: absolute;
-	left: 75px; top: 320px;
+	left: 100px;
+	top: 300px;
 }
 
 .BPM-wrapper{
@@ -107,31 +108,32 @@
 }
 .key-select{
 	position: absolute;
-	top: 320px;
-	left: 885px;
+	top: 300px;
+	left: 915px;
 }
 .scale-select{
 	position: absolute;
-	top: 320px;
-	left: 955px;
+	top: 300px;
+	left: 975px;
 
 }
 .progress-select{
 	position: absolute;
-	top: 320px;
-	left: 1055px;
+	top: 300px;
+	left: 1070px;
 }
 .go{
   position: absolute;
 	background-color:#52658f;
   border: none;
 	padding: 7px;
-  font-size: 15px;
+  font-size: 12px;
 	font-family: Comfortaa;
 	color: white;
 	position: absolute;
-	top: 365px;
-	left:1050px;
+	top: 350px;
+	left:1060px;
+	width: 105px;
 }
 .go:hover{
 	background-color: #caebf2;
@@ -141,35 +143,36 @@
 	padding: 7px;
   border: 0.5px solid #52658f;
   font-family: Comfortaa;
-  font-size: 15px;
+  font-size: 12px;
+	max-width:55px;
 }
 .scale-select select {
 	padding: 7px;
 	border: 0.5px solid #52658f;
   font-family: Comfortaa;
-  font-size: 15px;
+  font-size: 12px;
 	max-width: 90px;
 }
 .progress-select select {
 	padding: 7px;
 	border: 0.5px solid #52658f;
   font-family: Comfortaa;
-  font-size: 15px;
+  font-size: 12px;
 }
 .main-progress{
   position: absolute;
-  top: 365px;
-  left: 885px;
+  top: 350px;
+  left: 915px;
 
 }
 a.main:link, a.main:visited {
-    height: 24px;
+    height: 20px;
     position: absolute;
     background-color: #88bbd6;
-    width: 150px;
+    width: 140px;
     color: white;
     padding: 7px 0px 0px 0px;
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

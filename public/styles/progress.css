@@ -9,8 +9,8 @@
 	width: 800px;
 	background-color: white;
 	position: absolute;
-	left: 200px;
-	top: 330px;
+	left: 100px;
+	top: 300px;
 }
 .BPM-wrapper{
   position: absolute;
@@ -107,17 +107,11 @@
 
 .legend-container {
   position: absolute;
-  left: 190px;
-  top: 280px;
+  left: 950px;
+  top: 300px;
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.legend-header {
-  vertical-align: bottom;
-  float: left;
-	margin-left: 110px;
 }
 
 .legend {
