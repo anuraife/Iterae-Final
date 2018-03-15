@@ -10,17 +10,17 @@ var BadgeArray = [
 ];
 var key_array =
 ["C",
-"C#/Db",
-"D",
-"D#/Eb",
-"E",
-"F",
-"F#/Gb",
 "G",
-"G#/Ab",
+"D",
 "A",
-"A#/Bb",
-"B"];
+"E",
+"B",
+"F#",
+"C#",
+"Ab",
+"Eb",
+"Bb",
+"F"];
 var scale_array =
 [
 "Major",
