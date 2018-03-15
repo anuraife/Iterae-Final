@@ -16,7 +16,7 @@
 		<script src="js/config.js"></script>
 		<script src="js/nav.js"></script>
 		<script src="js/practice.js"></script>
-		<script src="js/jquery.js"></script>
+		<!-- <script src="js/jquery.js"></script> -->
 	</head>
 	<body>
 		<div class="nav" id="nav">
@@ -68,30 +68,36 @@
 		</div>
 
 		<div class = "other-level" id = "beginner-scale-container">
-			<button id = "scale1" class = "beg selected scaleInBar"> Major </button>
+			<button id = "beg-scale1" class = "beg selected scaleInBar" onclick = "changeScale('beginner', this.id)">Major</button>
 			<a id = "div1" class = "divider"> / </a>
-			<button id = "scale2" class = "beg other scaleInBar"> Minor </button>
+			<button id = "beg-scale2" class = "beg other scaleInBar" onclick = "changeScale('beginner', this.id)">Minor</button>
 		</div>
 
 		<div class = "other-level" id = "intermediate-scale-container">
-			<button id = "scale1" class = "int selected scaleInBar"> Harmonic </button>
+			<button id = "int-scale1" class = "int selected scaleInBar" onclick = "changeScale('intermediate', this.id)">Harmonic</button>
 			<a id = "div1" class = "divider"> / </a>
-			<button id = "scale2" class = "int other scaleInBar"> Melodic</button>
+			<button id = "int-scale2" class = "int other scaleInBar" onclick = "changeScale('intermediate', this.id)">Melodic</button>
 			<a id = "div2" class = "divider"> / </a>
-			<button id = "scale3" class = "int other scaleInBar"> Chromatic </button>
+			<button id = "int-scale3" class = "int other scaleInBar" onclick = "changeScale('intermediate', this.id)">Chromatic</button>
 			<a id = "div3" class = "divider"> / </a>
-			<button id = "scale4" class = "int other scaleInBar"> Pentatonic </button>
+			<button id = "int-scale4" class = "int other scaleInBar" onclick = "changeScale('intermediate', this.id)">Pentatonic</button>
 		</div>
 
 
 		<div class = "other-level" id = "expert-scale-container">
-			<button id = "exp-scale1" class = "expert selected scaleInBar"> Ionian </button>
+			<button id = "exp-scale1" class = "exp selected scaleInBar" onclick = "changeScale('expert', this.id)">Ionian</button>
 			<a id = "div1" class = "divider"> / </a>
-			<button id = "exp-scale2" class = "expert other scaleInBar">  Test </button>
+			<button id = "exp-scale2" class = "exp other scaleInBar" onclick = "changeScale('expert', this.id)">Dorian</button>
 			<a id = "div2" class = "divider"> / </a>
-			<button id = "exp-scale3" class = "expert other scaleInBar"> Test </button>
+			<button id = "exp-scale3" class = "exp other scaleInBar" onclick = "changeScale('expert', this.id)">Phrygian</button>
 			<a id = "div3" class = "divider"> / </a>
-			<button id = "exp-scale4" class = "expert other scaleInBar"> Test </button>
+			<button id = "exp-scale4" class = "exp other scaleInBar" onclick = "changeScale('expert', this.id)">Lydian</button>
+			<a id = "div4" class = "divider"> / </a>
+			<button id = "exp-scale5" class = "exp other scaleInBar" onclick = "changeScale('expert', this.id)">Mixolydian</button>
+			<a id = "div5" class = "divider"> / </a>
+			<button id = "exp-scale6" class = "exp other scaleInBar" onclick = "changeScale('expert', this.id)">Aeolian</button>
+			<a id = "div6" class = "divider"> / </a>
+			<button id = "exp-scale7" class = "exp other scaleInBar" onclick = "changeScale('expert', this.id)">Locrian</button>
 		</div>
 
 		<div class="metronome-container">
@@ -117,12 +123,12 @@
 			Scale
 			</button>
 			<div class="scale-dropdown-content">
-				<p><button class = "level-select-button" id = "beginner-scale-select" onclick = "changeScale('beg')">
+				<p><button class = "level-select-button" id = "beginner-scale-select" onclick = "changeLevel('beginner')">
 					Major/Minor
 				</button></p>
-    			<p><button class = "level-select-button" id = "intermediate-scale-select">
+    			<p><button class = "level-select-button" id = "intermediate-scale-select" onclick = "changeLevel('intermediate')">
     			Harmonic Minor/Melodic Minor/...</button></p>
-    			<p><button class = "level-select-button" id = "expert-scale-select">
+    			<p><button class = "level-select-button" id = "expert-scale-select" onclick = "changeLevel('expert')">
     			Ionian/Dorian/Phrygian/...</button></p>
 			</div>
 		</div>
@@ -145,31 +151,31 @@
 		    		</a>
 		    		<a href="#">
 		    			<button class = "key-select-button"
-							onclick="document.getElementById('scale-notes').src='res/scales/d_major.png'">
+							onclick="changeKey('d')">
 								D
 							</button>
 		    		</a>
 						<a href="#">
 							<button class = "key-select-button"
-							onclick="document.getElementById('scale-notes').src='res/scales/a_major.png'">
+							onclick="changeKey('a')">
 								A
 							</button>
 						</a>
 		    		<a href="#">
 							<button class = "key-select-button"
-							onclick="document.getElementById('scale-notes').src='res/scales/e_major.png'">
+							onclick="changeKey('e')">
 								E
 							</button>
 						</a>
 		    		<a href="#">
 							<button class = "key-select-button"
-							onclick="document.getElementById('scale-notes').src='res/scales/b_major.png'">
+							onclick="changeKey('b')">
 								B
 							</button>
 						</a>
 						<a href="#">
 							<button class = "key-select-button"
-							onclick="document.getElementById('scale-notes').src='res/scales/fsharp_major.png'">
+							onclick="changeKey('fsharp')">
 								F#
 							</button>
 						</a>

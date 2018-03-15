@@ -139,14 +139,40 @@ function clearer() {
 }
 
 function changeKey(key){
-	document.getElementById('scale-notes').src='res/scales/' + key + '_major.png';
+	var scale = document.getElementById('scale-name').innerHTML.toLowerCase();
+	document.getElementById('scale-notes').src='res/scales/' + key + '_' + scale + '.png';
 	document.getElementById('key-name').innerHTML = key.toUpperCase();
 }
 
-function changeScale(level){
-	if(level == "beg"){
-		document.getElementById("beginner-scale-container").style.visibility = 'visible';
-	}
+function changeLevel(level){
+	var scaleLevel = level + "-scale-container";
+	document.getElementById(scaleLevel).classList = 'selected-level';
+}
+
+function changeScale(level, clickedID){	
+	//minmizes the popup
+	console.log('clicked ' + clickedID);
+	var scaleLevel = level + "-scale-container";
+	var clickedScale = document.getElementById(clickedID);
+	console.log('level '+ level);
+	var lev = level.substring(0, 3);
+	var currSelScale = document.getElementsByClassName('selected ' + lev)[0];
+	console.log('lev ' + lev);
+	console.log(currSelScale);
+	document.getElementById(scaleLevel).classList = 'other-level';
+	
+	currSelScale.classList.remove('selected');
+	currSelScale.classList.add('other');
+
+	clickedScale.classList.remove('other');
+	clickedScale.classList.add('selected');
+
+	document.getElementById('scale-name').innerHTML = clickedScale.innerHTML;
+
+	var key = document.getElementById('key-name').innerHTML.toLowerCase();
+	var scale = document.getElementById('scale-name').innerHTML.toLowerCase();
+	document.getElementById('scale-notes').src='res/scales/' + key + '_' + scale + '.png';
+
 }
 
 function signOut() {

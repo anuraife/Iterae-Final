@@ -23,14 +23,6 @@
 	width: 800px; height: auto;
 }
 
-#beginner-scale-container{
-	height: 47px;
-	width: 500px;
-	vertical-align: text-bottom;
-	float: right;
-	margin-top: -500px;
-	margin-right: -150px;
-}
 
 #scale-dropbtn{
 	background-color:#88bbd6;
@@ -53,7 +45,8 @@
 	float: right;
     display: none;
     background-color: #f1f1f1;
-    width: 200px;
+    width: 225px;
+    padding: 3px 4px 3px 4px;
     box-shadow: 0px 6px 14px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -61,8 +54,7 @@
 .scale-dropdown-content a {
 	float: right;
 	right: 0;
-    color: black;
-    padding: 8px 16px;
+    color: black;    
     text-decoration: none;
     display: block;
     width: 95px;
@@ -72,16 +64,28 @@
 	background-color: #ddd;
 }
 
+#beginner-scale-container{
+	height: 47px;
+	width: 300px;
+	vertical-align: text-bottom;
+	text-align: center;
+	/*float: right;*/
+}
 
 #intermediate-scale-container{
-	visibility: hidden;
-	height: 47px;
+	height: 120px;
+	width: 375px;
+	vertical-align: text-bottom;
+	float: left;
+	text-align: center;
+}
+
+#expert-scale-container{
+	height: 120px;
 	width: 500px;
 	vertical-align: text-bottom;
-	float: right;
-	text-align: right;
-	margin-top: -520px;
-	margin-right: -190px;
+	float: left;
+	text-align: center;
 }
 
 .other-level{
@@ -90,12 +94,24 @@
 	width: 500px;
 	vertical-align: text-bottom;
 	float: right;
-	margin-top: -520px;
-	margin-right: -190px;
+	position: absolute;
+	right: 100px;
+	top: 300px;
 }
 
 .selected-level{
 	visibility: visible;
+	background-color: white;
+	border-width: 1px 1px 1px 1px;
+	text-align: center;
+	padding: 5px 5px 5px 5px;
+	border-style: solid;
+	border-color: black;
+	z-index: 1;
+	border-radius: 10px;
+	position: absolute;
+	right: 50px;
+	top: 300px;
 }
 
 .scaleInBar {
