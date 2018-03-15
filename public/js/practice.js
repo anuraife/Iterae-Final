@@ -146,19 +146,22 @@ function changeKey(key){
 
 function changeLevel(level){
 	var scaleLevel = level + "-scale-container";
+	var currLevel = document.getElementsByClassName('selected-level')[0];
+	if(currLevel != null){
+		currLevel.classList = 'other-level';
+	}
 	document.getElementById(scaleLevel).classList = 'selected-level';
 }
 
 function changeScale(level, clickedID){	
 	//minmizes the popup
-	console.log('clicked ' + clickedID);
+	
 	var scaleLevel = level + "-scale-container";
 	var clickedScale = document.getElementById(clickedID);
-	console.log('level '+ level);
+	
 	var lev = level.substring(0, 3);
 	var currSelScale = document.getElementsByClassName('selected ' + lev)[0];
-	console.log('lev ' + lev);
-	console.log(currSelScale);
+	
 	document.getElementById(scaleLevel).classList = 'other-level';
 	
 	currSelScale.classList.remove('selected');
