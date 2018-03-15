@@ -7,7 +7,7 @@ var BadgeArray = [
     "Speedster Badge",
     "100% Accuracy Badge",
     "Beethoven Badge"
-]
+];
 var key_array =
 ["C",
 "C#/Db",
@@ -129,9 +129,9 @@ function Go(){
   console.log(key);
   title = key_array[key]+" "+scale_array[scale]+ " " +progress_array[progress];
   if (progress == 0)
-  {data = getDataPoints(90,200);}
-  else
   {data = getDataPoints(50, 100);}
+  else
+  {data = getDataPoints(90,200);}
   graph(title, data);
 }
 
@@ -141,5 +141,10 @@ function signOut() {
     	window.location.href="splash.html";
     }
 }
-
+// function Onload(){
+//   var key = document.getElementById("key").selectedIndex;
+// 	var scale = document.getElementById("scale").selectedIndex;
+//   var progress = document.getElementById("progress").selectedIndex;
+//   key =
+// }
 init();
