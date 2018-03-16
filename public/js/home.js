@@ -66,6 +66,13 @@ renderBadgeText = function(num) {
     return "Level " + num + " Badge";
 }
 
+function changePractice(innerHTML){
+    window.location.href = "practice.html";
+    document.getElementById('scale-name').innerHTML = innerHTML;
+
+}
+
+
 function signOut() {
     if (firebase.auth().currentUser) {
         firebase.auth().signOut();
