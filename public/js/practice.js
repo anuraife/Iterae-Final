@@ -10,7 +10,9 @@ var count = 0;			   // Helper variable for acceleration
 var interval;
 var timeout;
 var click = new Audio('res/metronome/click.wav');
+var currName;
 var currSelScale;
+var uid;
 
 // Initialize the progress page
 function init() {
@@ -22,7 +24,7 @@ function init() {
             var emailVerified = user.emailVerified;
             var photoURL = user.photoURL;
             var isAnonymous = user.isAnonymous;
-            var uid = user.uid;
+            uid = user.uid;
             var providerData = user.providerData;
             signedIn = true;
             renderMetronome(uid);
@@ -31,20 +33,34 @@ function init() {
             signedIn = false;
             window.location.href="splash.html";
         }
-    });
+    }); 
 
 	document.getElementById("bpm").value = tempo.toString();
 	selectRhythm(rhythm);
 
 	var parsedURL = new URL(window.location.href);
-  	var scale= parsedURL.searchParams.get("scale");
+  	var scale = parsedURL.searchParams.get("scale");
 	if (scale) {document.getElementById('scale-name').innerHTML = scale;}
 	
 	currSelScale = document.getElementsByClassName("selected")[0];
+	var key = document.getElementById('key-name').innerHTML;
+	var scale = document.getElementById('scale-name').innerHTML;
+	currName = key + " " + scale;
 	
-	document.getElementById('scale-notes').src='res/scales/' + document.getElementById('key-name').innerHTML.toLowerCase() + '_' + currSelScale.innerHTML.toLowerCase() + '.png';
+	document.getElementById('scale-notes').src = 'res/scales/' + document.getElementById('key-name').innerHTML.toLowerCase() + '_' + currSelScale.innerHTML.toLowerCase() + '.png';
 
 };
+
+function savePractice() {
+  var today = new Date().toString();
+  console.log(currSelScale);
+  return firebase.database().ref().child('/users/' + uid).update({
+  	lastPracticed: today,
+  	lastScale: currName
+  }).catch(function onError(err) {
+    console.log(err);
+  });
+}
 
 function renderMetronome(uid) {
     firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
@@ -92,6 +108,7 @@ function switchRhythm(newRhythm){
 
 // Maps saved rhythm to metronome and plays it
 function startMetronome() {
+	savePractice();
 	clearer();
 	switch(rhythm) {
     	case 'consistent':
@@ -181,10 +198,6 @@ function changeLevel(level){
 }
 
 function changeScale(level, clickedID){
-	//minmizes the popup
-	console.log('currrr');
-	console.log(currSelScale);
-
 	var scaleLevel = level + "-scale-container";
 	var clickedScale = document.getElementById(clickedID);
 
@@ -195,8 +208,6 @@ function changeScale(level, clickedID){
 
 	document.getElementById(scaleLevel).classList = 'other-level';
 
-	console.log('cursel');
-	console.log(currSelScale);
 	currSelScale.classList.remove('selected');
 	currSelScale.classList.add('other');
 
@@ -207,9 +218,10 @@ function changeScale(level, clickedID){
 
 	document.getElementById('scale-name').innerHTML = currSelScale.innerHTML;
 
-	var key = document.getElementById('key-name').innerHTML.toLowerCase();
-	var scale = document.getElementById('scale-name').innerHTML.toLowerCase();
-	imageURI = 'res/scales/' + key + '_' + scale + '.png';
+	var key = document.getElementById('key-name').innerHTML;
+	var scale = document.getElementById('scale-name').innerHTML;
+	currName = key + " " + scale;
+	imageURI = 'res/scales/' + key.toLowerCase() + '_' + scale.toLowerCase() + '.png';
 	renderScale(imageURI);
 }
 

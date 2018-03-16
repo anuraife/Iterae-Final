@@ -79,7 +79,10 @@ function savePreferences(uid, email) {
     bpm: 90,
     timeSig: "4/4",
     metronome: 1,
-    badges: [0, 0, 0, 0, 0, 0, 0]
+    badges: [0, 0, 0, 0, 0, 0, 0],
+    lastPracticed: "Never",
+    lastScale: "None",
+    lastBadge: "None"
   }).then(function onSuccess(res) {
     localStorage.setItem('avatar', avatarIndex);
     var b = document.getElementById('level').selectedIndex;

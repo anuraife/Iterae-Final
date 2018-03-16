@@ -1,10 +1,7 @@
 var uid;
-var email;
-var level;
 var avatarIndex;
 var bpm;
 var timeSig;
-var badges;
 var currMetronome = 0;
 
 function init(){
@@ -12,7 +9,7 @@ function init(){
   firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
           var displayName = user.displayName;
-          email = user.email;
+          var email = user.email;
           var emailVerified = user.emailVerified;
           var photoURL = user.photoURL;
           var isAnonymous = user.isAnonymous;
@@ -34,9 +31,6 @@ function renderSettings(uid) {
   document.getElementById("avatar" + avatarIndex.toString()).classList.add("avatar-active");
   
   firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
-    joined = (snapshot.val() && snapshot.val().joined) || "Unknown";
-    badges = (snapshot.val() && snapshot.val().badges) || [0, 0, 0, 0, 0, 0, 0];
-
     bpm = (snapshot.val() && snapshot.val().bpm) || 90;
     document.getElementById('bpm').text = bpm;
 
@@ -44,8 +38,6 @@ function renderSettings(uid) {
 
     metronome = (snapshot.val() && snapshot.val().metronome) || 1;
     changeMetronome(metronome);
-
-    level = (snapshot.val() && snapshot.val().level) || "Not specified";
   });
 }
 
@@ -66,22 +58,15 @@ function changeMetronome(n) {
 }
 
 function saveSettings() {
-  var settingsData = {
-    username: email,
+  var updates = {
     avatar: avatarIndex,
     bpm: bpm,
     timeSig: timeSig,
-    metronome: currMetronome,
-    level: level,
-    badges: badges,
-    joined: joined
+    metronome: currMetronome
   };
 
-  var updates = {};
-  updates['/users/' + uid] = settingsData;
-  console.log(settingsData);
   localStorage.setItem('avatar', avatarIndex);
-  return firebase.database().ref().update(updates).then(function onSuccess(res) {
+  return firebase.database().ref().child('/users/' + uid).update(updates).then(function onSuccess(res) {
     document.getElementById("save-settings").innerHTML = "Saved";
     }).catch(function onError(err) {
       console.log(err);
