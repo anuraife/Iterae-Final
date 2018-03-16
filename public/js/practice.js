@@ -9,9 +9,7 @@ var count = 0;			   // Helper variable for acceleration
 var interval;
 var timeout;
 var click = new Audio('res/metronome/click.wav');
-var currSelScale = document.getElementsByClassName("selected")[0];
-var currSelLevel = document.getElementsByClassName("selected-level")[0];
-
+var currSelScale;
 
 // Initialize the progress page
 function init() {
@@ -35,6 +33,8 @@ function init() {
 
 	document.getElementById("bpm").value = tempo.toString();
 	selectRhythm(rhythm);
+
+	currSelScale = document.getElementsByClassName("selected")[0];
 };
 
 // Play/pause button is pressed for metronome
@@ -139,9 +139,18 @@ function clearer() {
 }
 
 function changeKey(key){
+	
 	var scale = document.getElementById('scale-name').innerHTML.toLowerCase();
-	document.getElementById('scale-notes').src='res/scales/' + key + '_' + scale + '.png';
-	document.getElementById('key-name').innerHTML = key.toUpperCase();
+	if (key[1] == ("#")){
+		document.getElementById('scale-notes').src='res/scales/' + key[0].toLowerCase() + 'sharp' + '_' + scale + '.png';
+	}
+	else if (key[1] == ('b')){
+		document.getElementById('scale-notes').src='res/scales/' + key[0].toLowerCase() + 'flat'+ '_' + scale + '.png';
+	}
+	else{
+		document.getElementById('scale-notes').src='res/scales/' + key.toLowerCase() + '_' + scale + '.png';
+	}
+	document.getElementById('key-name').innerHTML = key;
 }
 
 function changeLevel(level){
@@ -155,22 +164,30 @@ function changeLevel(level){
 
 function changeScale(level, clickedID){	
 	//minmizes the popup
-	
+	console.log('currrr');
+	console.log(currSelScale);
+
 	var scaleLevel = level + "-scale-container";
 	var clickedScale = document.getElementById(clickedID);
 	
 	var lev = level.substring(0, 3);
-	var currSelScale = document.getElementsByClassName('selected ' + lev)[0];
+	
+	var currScaleName = document.getElementById('scale-name').innerHTML;
+	//var currSelScale = document.getElementsByClassName(lev)[0];
 	
 	document.getElementById(scaleLevel).classList = 'other-level';
 	
+	console.log('cursel');
+	console.log(currSelScale);
 	currSelScale.classList.remove('selected');
 	currSelScale.classList.add('other');
 
 	clickedScale.classList.remove('other');
 	clickedScale.classList.add('selected');
 
-	document.getElementById('scale-name').innerHTML = clickedScale.innerHTML;
+	currSelScale = clickedScale;
+
+	document.getElementById('scale-name').innerHTML = currSelScale.innerHTML;
 
 	var key = document.getElementById('key-name').innerHTML.toLowerCase();
 	var scale = document.getElementById('scale-name').innerHTML.toLowerCase();

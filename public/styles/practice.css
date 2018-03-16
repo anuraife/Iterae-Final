@@ -19,7 +19,7 @@
 	display: block;
     margin-left: auto;
     margin-right: 150px;
-	margin-top: 350px;
+	margin-top: 300px;
 	width: 800px; height: auto;
 }
 
@@ -54,7 +54,7 @@
 .scale-dropdown-content a {
 	float: right;
 	right: 0;
-    color: black;    
+    color: black;
     text-decoration: none;
     display: block;
     width: 95px;
@@ -66,23 +66,22 @@
 
 #beginner-scale-container{
 	height: 47px;
-	width: 300px;
+	width: auto;
 	vertical-align: text-bottom;
 	text-align: center;
-	/*float: right;*/
 }
 
 #intermediate-scale-container{
-	height: 120px;
-	width: 375px;
+	height: 47px;
+	width: auto;
 	vertical-align: text-bottom;
 	float: left;
 	text-align: center;
 }
 
 #expert-scale-container{
-	height: 120px;
-	width: 500px;
+	height: 47px;
+	width: auto;
 	vertical-align: text-bottom;
 	float: left;
 	text-align: center;
@@ -141,7 +140,7 @@
 }
 
 .metronome-container {
-	margin-right: 30%;
+	margin-right: 20%;
     display: inline;
 	float: right;
 	display: inline;
@@ -157,20 +156,21 @@
 }
 
 .play-pause {
-	height: 30px;
-	margin-bottom: 10px;
-	margin-right: -70px;
+	height: 100px;
+	margin-bottom: 65px;
+	margin-left: 40px;
 }
 
 .play-pause:hover {
-	height: 40px;
-	margin-bottom: 0px;
+	height: 100px;
+	margin-bottom: 60px;
 }
 
 .rhythm-options {
 	display: block;
 	align-items: center;
-	margin-right: -70px;
+	margin-left: 50px;
+	width: 200px;
 }
 
 .rhythm {
@@ -194,18 +194,21 @@
 	align-items: center;
 	vertical-align: center;
 	justify-content: center;
+	width: 410px;
+	height: 229px;
 }
 
 .metronome-image {
     height: 225px;
     margin: 0px 20px;
+		margin-left: 70px;
 }
 
 .metronome-text {
 	float: right;
 	display: block;
-	margin-right:20px;
-	margin-top: 50px;
+	margin-right:50px;
+	align-items: center;
 }
 
 input[type=number] {
@@ -214,20 +217,20 @@ input[type=number] {
 }
 
 h2 {
-	font-size: 35px;
+	font-size: 20px;
 	font-weight: normal;
 	margin: 0px;
 	padding: 0px;
 	align-items: center;
 	text-align: center;
+	margin-bottom: 5px;
 }
 
 .bpm {
-	font-size: 60px;
+	font-size: 30px;
 	font-weight: bold;
 	font-weight: 900;
 	margin-left: 20px;
-	margin-bottom: 5px;
 	align-items: center;
 	text-align: center;
 }

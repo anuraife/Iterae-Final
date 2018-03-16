@@ -212,3 +212,81 @@ a.scale-progress:hover {
 a.scale-progress:active {
     text-decoration: underline;
 }
+.poor {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid var(--dark-blue);
+}
+
+.poor .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+		background-color:  var(--dark-blue);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.poor:hover .tooltiptext {
+    visibility: visible;
+}
+.good {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid var(--dark-blue);
+}
+
+.good .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+		background-color:  var(--dark-blue);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.good:hover .tooltiptext {
+    visibility: visible;
+}
+.great {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid var(--dark-blue);
+}
+
+.great .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color:  var(--dark-blue);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.great:hover .tooltiptext {
+    visibility: visible;
+}

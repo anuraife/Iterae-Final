@@ -75,7 +75,7 @@
 		</div>
 
 		<div class = "other-level" id = "intermediate-scale-container">
-			<button id = "int-scale1" class = "int selected scaleInBar" onclick = "changeScale('intermediate', this.id)">Harmonic</button>
+			<button id = "int-scale1" class = "int other scaleInBar" onclick = "changeScale('intermediate', this.id)">Harmonic</button>
 			<a id = "div1" class = "divider"> / </a>
 			<button id = "int-scale2" class = "int other scaleInBar" onclick = "changeScale('intermediate', this.id)">Melodic</button>
 			<a id = "div2" class = "divider"> / </a>
@@ -86,7 +86,7 @@
 
 
 		<div class = "other-level" id = "expert-scale-container">
-			<button id = "exp-scale1" class = "exp selected scaleInBar" onclick = "changeScale('expert', this.id)">Ionian</button>
+			<button id = "exp-scale1" class = "exp other scaleInBar" onclick = "changeScale('expert', this.id)">Ionian</button>
 			<a id = "div1" class = "divider"> / </a>
 			<button id = "exp-scale2" class = "exp other scaleInBar" onclick = "changeScale('expert', this.id)">Dorian</button>
 			<a id = "div2" class = "divider"> / </a>
@@ -104,13 +104,13 @@
 		<div class="metronome-container">
 			<div class="metronome">
 				<img src="res/metronome/metro_1/metronome.png" alt="Metronome" class="metronome-image" id="metro">
+				<img src="res/play.png" class="play-pause" id="playPause" onclick="metronome()">
+			</div>
+			<div class="controls">
 				<div class="metronome-text">
 					<input type="number" class="bpm" id="bpm" min="1" max="220" value="90">
 					<h2>BPM</h2>
 				</div>
-			</div>
-			<div class="controls">
-				<img src="res/play.png" class="play-pause" id="playPause" onclick="metronome()">
 		    	<div class="rhythm-options">
 			    	<button class="btn paper-flatten" id="consistent" onclick="switchRhythm('consistent')">Consistent</button>
 			    	<button class="btn paper-flatten" id="acceleration" onclick="switchRhythm('acceleration')">Acceleration</button>
@@ -140,75 +140,51 @@
 	  			<div class="dropdown-content">
 						<a href="#">
 							<button class = "key-select-button"
-							onclick="changeKey('c')">
-								C
-							</button>
+							onclick="changeKey(this.innerHTML)">C</button>
 						</a>
 		    		<a href="#">
 		    			<button class = "key-select-button"
-							onclick="changeKey('g')">
-								G
-							</button>
+							onclick="changeKey(this.innerHTML)">G</button>
 		    		</a>
 		    		<a href="#">
 		    			<button class = "key-select-button"
-							onclick="changeKey('d')">
-								D
-							</button>
+							onclick="changeKey(this.innerHTML)">D</button>
 		    		</a>
 						<a href="#">
 							<button class = "key-select-button"
-							onclick="changeKey('a')">
-								A
-							</button>
+							onclick="changeKey(this.innerHTML)">A</button>
 						</a>
 		    		<a href="#">
 							<button class = "key-select-button"
-							onclick="changeKey('e')">
-								E
-							</button>
+							onclick="changeKey(this.innerHTML)">E</button>
 						</a>
 		    		<a href="#">
 							<button class = "key-select-button"
-							onclick="changeKey('b')">
-								B
-							</button>
+							onclick="changeKey(this.innerHTML)">B</button>
 						</a>
 						<a href="#">
 							<button class = "key-select-button"
-							onclick="changeKey('fsharp')">
-								F#
-							</button>
+							onclick="changeKey(this.innerHTML)">F#</button>
 						</a>
 		    		<a href="#">
 							<button class = "key-select-button"
-							onclick="document.getElementById('scale-notes').src='res/scales/csharp_major.png'">
-								C#
-							</button>
+							onclick="changeKey(this.innerHTML)">C#</button>
 						</a>
 		    		<a href="#">
 							<button class = "key-select-button"
-							onclick="document.getElementById('scale-notes').src='res/scales/aflat_major.png'">
-								Ab
-							</button>
+							onclick="changeKey(this.innerHTML)">Ab</button>
 						</a>
 						<a href="#">
 							<button class = "key-select-button"
-							onclick="document.getElementById('scale-notes').src='res/scales/eflat_major.png'">
-								Eb
-							</button>
+							onclick="changeKey(this.innerHTML)">Eb</button>
 						</a>
 		    		<a href="#">
 							<button class = "key-select-button"
-							onclick="document.getElementById('scale-notes').src='res/scales/bflat_major.png'">
-								Bb
-							</button>
+							onclick="changeKey(this.innerHTML)">Bb</button>
 						</a>
 		    		<a href="#">
 							<button class = "key-select-button"
-							onclick="document.getElementById('scale-notes').src='res/scales/f_major.png'">
-								F
-							</button>
+							onclick="changeKey(this.innerHTML)">F</button>
 						</a>
 	  			</div>
 		</div>

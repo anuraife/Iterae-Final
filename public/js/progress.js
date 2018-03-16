@@ -8,7 +8,7 @@ var BadgeArray = [
     "Speedster Badge",
     "100% Accuracy Badge",
     "Beethoven Badge"
-]
+];
 
 var poorColor = "#e9e9f0";
 var goodColor = "#FFF5EE";
@@ -16,7 +16,7 @@ var greatColor = "#7BCCB5";
 
 var colorMapping = [poorColor, goodColor, greatColor];
 
-var keyMapping = ["C", "C#-Db", "D", "D#-Eb", "E", "F", "F#-Gb", "G", "G#-Ab", "A", "A#-Bb", "B"];
+var keyMapping = ["C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F"];
 var scaleMapping = ["Major", "Minor", "Harmonic", "Melodic", "Chromatic", "Pentatonic",
                     "Ionian", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aeolian", "Locrian"];
 

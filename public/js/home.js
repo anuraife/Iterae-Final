@@ -40,6 +40,12 @@ function init(){
     }
 };
 
+function changePractice(innerHTML){
+    window.location.href = "practice.html";
+    document.getElementById('scale-name').innerHTML = innerHTML;
+
+}
+
 window.onload = function() {
     init();
 }
