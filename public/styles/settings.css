@@ -60,6 +60,7 @@ h1, h2, h3, body {
   opacity: 0.4;
   outline: none;
   float: right;
+  margin-bottom: 20px;
 
 }
 
@@ -91,7 +92,7 @@ h1, h2, h3, body {
 }
 
 .answer {
-  width: 20px;
+  width: 200px;
   margin: 10px 0px;
   outline: none;
 }
