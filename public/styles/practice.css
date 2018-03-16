@@ -66,23 +66,22 @@
 
 #beginner-scale-container{
 	height: 47px;
-	width: 300px;
+	width: auto;
 	vertical-align: text-bottom;
 	text-align: center;
-	/*float: right;*/
 }
 
 #intermediate-scale-container{
-	height: 120px;
-	width: 375px;
+	height: 47px;
+	width: auto;
 	vertical-align: text-bottom;
 	float: left;
 	text-align: center;
 }
 
 #expert-scale-container{
-	height: 120px;
-	width: 500px;
+	height: 47px;
+	width: auto;
 	vertical-align: text-bottom;
 	float: left;
 	text-align: center;
