@@ -3,10 +3,10 @@ var uid;
 var BadgeArray = [
     "Beginner Badge: play metronome once",
     "Wildfire Badge: maintain a two week streak",
-    "Overachiever Badge: score over 80% accuracy for all major and minor scales",
+    "Overachiever Badge: 80% accuracy for all major and minor scales",
     "Treble Badge: practice with all time signatures",
     "Speedster Badge: practice at 150 BPM",
-    "Artist Badge: score perfect accuracy",
+    "Artist Badge: achieve perfect accuracy",
     "Beethoven Badge: practice all scale variations"
 ];
 
