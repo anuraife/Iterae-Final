@@ -37,10 +37,10 @@ function init() {
 	selectRhythm(rhythm);
 
 	currSelScale = document.getElementsByClassName("selected")[0];
+
 	var parsedURL = new URL(window.location.href);
   var scale= parsedURL.searchParams.get("scale");
-	console.log(scale);
-	document.getElementById('scale-name').innerHTML = scale;
+	if (scale) {document.getElementById('scale-name').innerHTML = scale;}
 };
 
 function renderMetronome(uid) {
