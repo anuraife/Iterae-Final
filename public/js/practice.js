@@ -57,8 +57,6 @@ function setPosition(){
 	var screenWidth = Number(screen.width);
 	var metronomePos = screenWidth / 2 - 300;
 	var contentsPos = screenWidth / 2 - 400;
-	console.log('whatahthat');
-
 	document.getElementById('metronome-container').style.left = metronomePos.toString() + "px";
 	document.getElementById('contents-container').style.left = contentsPos.toString() + "px";
 }

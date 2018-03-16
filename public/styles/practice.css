@@ -10,19 +10,16 @@
 
 .scale-header {
 	font-size: 50px;
-	position: absolute;
+	position: relative;
 	display: block;
-  	left: 650px;
-  	top: 125px;
-	/*margin-left:275px;
-	margin-top: 45px;*/
+  	left: 280px;
+  	top: 45px;
+  	width: auto;
 }
 
 #scale-notes {
 	display: block;
     margin-left: auto;
-    /*margin-right: 150px;
-	margin-top: 300px;*/
 	width: 800px; height: auto;
 	position: absolute;
 	top: 450px;
