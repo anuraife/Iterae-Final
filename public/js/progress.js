@@ -7,7 +7,7 @@ var BadgeArray = [
     "Speedster Badge",
     "100% Accuracy Badge",
     "Beethoven Badge"
-]
+];
 
 var poorColor = "#e9e9f0";
 var goodColor = "#FFF5EE";
@@ -15,7 +15,7 @@ var greatColor = "#7BCCB5";
 
 var colorMapping = [poorColor, goodColor, greatColor];
 
-var keyMapping = ["C", "C#-Db", "D", "D#-Eb", "E", "F", "F#-Gb", "G", "G#-Ab", "A", "A#-Bb", "B"];
+var keyMapping = ["C", "G", "D", "A", "E", "B", "F#", "C#", "Ab", "Eb", "Bb", "F"];
 var scaleMapping = ["Major", "Minor", "Harmonic", "Melodic", "Chromatic", "Pentatonic",
                     "Ionian", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aeolian", "Locrian"];
 
@@ -37,8 +37,21 @@ function init(){
             window.location.href="splash.html";
         }
     });
-
-
+  //
+  //   for (i=0;i<11;i+){
+  //     for(j=0;j<12;j++){
+  //       var scale_quote = keyMapping[i] + "_" + scaleMapping[j];
+  //       var scale = getElementById(scale_quote);
+  //       element.addEventListener('click', clickHandler);
+  // function clickHandler(){
+  //   for (i=0;i<11;i+){
+  //       for(j=0;j<12;j++){
+  //         var b = document.getElementById(scale_quote).value;
+  //         window.location.href="individualProgress.html?scale="+ encodeURIComponent(b);
+  //       }
+  //     }
+  //   }
+  // }}
     for (i=0; i<scaleMapping.length; i++) {
         var scaleName = scaleMapping[i];
         var scale = document.getElementById(scaleName);
@@ -94,7 +107,6 @@ function signOut() {
         window.location.href="splash.html";
     }
 }
-
 window.onload = function() {
     init();
 }
