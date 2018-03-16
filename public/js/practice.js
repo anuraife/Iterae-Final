@@ -218,9 +218,10 @@ function changeScale(level, clickedID){
 
 	document.getElementById('scale-name').innerHTML = currSelScale.innerHTML;
 
-	var key = document.getElementById('key-name').innerHTML.toLowerCase();
-	var scale = document.getElementById('scale-name').innerHTML.toLowerCase();
-	imageURI = 'res/scales/' + key + '_' + scale + '.png';
+	var key = document.getElementById('key-name').innerHTML;
+	var scale = document.getElementById('scale-name').innerHTML;
+	currName = key + " " + scale;
+	imageURI = 'res/scales/' + key.toLowerCase() + '_' + scale.toLowerCase() + '.png';
 	renderScale(imageURI);
 }
 
