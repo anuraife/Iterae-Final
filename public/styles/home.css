@@ -120,7 +120,7 @@ a.scale:active {
   height: 60px; width: auto;
   margin-left: 27px;
   outline: none;
-  display: inline-block;
+  display: none;
 }
 
 .modal {

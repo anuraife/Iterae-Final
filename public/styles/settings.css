@@ -43,10 +43,3 @@
   opacity: 0.4;
   outline: none;
 }
-#save-settings{
-  color:white;
-}
-#save-settings:hover{
-    background-color: #caebf2;
-		color: black;
-}

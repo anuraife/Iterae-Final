@@ -69,6 +69,8 @@ function saveSettings() {
     timeSig: timeSig,
     metronome: currMetronome,
     level: level,
+    badges: badges,
+    joined: joined
   };
 
   var updates = {};

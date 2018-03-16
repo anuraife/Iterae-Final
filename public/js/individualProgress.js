@@ -135,12 +135,6 @@ function Go(){
   graph(title, data);
 }
 
-function signOut() {
-    if (firebase.auth().currentUser) {
-        firebase.auth().signOut();
-    	window.location.href="splash.html";
-    }
-}
 // function Onload(){
 //   var key = document.getElementById("key").selectedIndex;
 // 	var scale = document.getElementById("scale").selectedIndex;

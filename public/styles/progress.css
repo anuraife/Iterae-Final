@@ -56,15 +56,11 @@
 }
 
 .badge {
-
   height: 70px; width: auto;
 	margin-top: 5px;
   margin-left: 16.5px;
   outline: none;
   display: inline-block;
-}
-
-.badge:hover{
   filter: grayscale(1);
 }
 

@@ -13,6 +13,7 @@
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
 <script src="js/config.js"></script>
+<script src="js/dbFunctions.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/settings.js"></script>
 </head>
@@ -74,6 +75,6 @@
       <input type="image" src="res/metronome/metro_1/metronome.png"  alt="Metronome 1" class="metronome" id="metronome1" onclick="changeMetronome(1)">
       <input type="image" src="res/metronome/metro_2/box_metro5.png"  alt="Metronome 2" class="metronome" id="metronome2" onclick="changeMetronome(2)">
     </div>
-    <button class="but" id="save-settings" name="save-settings" onclick="saveSettings(); getAvatar();">Save Settings</button>
+    <button class="but btn-blue" id="save-settings" name="save-settings" onclick="saveSettings(); getAvatar();">Save Settings</button>
 
   </div>

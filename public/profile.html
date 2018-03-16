@@ -12,6 +12,7 @@
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
 <script src="js/config.js"></script>
+<script src="js/dbFunctions.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/profile.js"></script>
 </head>
@@ -65,15 +66,15 @@
 
 	<div class = "skill-container">
   		<a class = "current-skill-level"> Skill Level: </a>
-  		<a class = "skill-value" id="skill-value"> </a>
+  		<a class = "skill-value" id="skill-value"></a>
   	</div>
 
   	<div class = "joined-container">
   		<a class = "joined"> Joined: </a>
-  		<a class = "joined-date"> March 4th, 2018 </a>
+  		<a class = "joined-date" id="joined"></a>
   	</div>
 
-  	<button class="but" id="reset-password" name="verify-email">Change Password</button>
+  	<button class="but btn-blue" id="reset-password" name="verify-email">Change Password</button>
   </div>
 
 

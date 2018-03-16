@@ -35,12 +35,13 @@ li a {
     text-align: center;
     padding: 15px 20px;
     border-radius: 20px;
-    color: black;
+    transition: 0.4s;
+    color: white;
     text-decoration: none;
 }
 
 .nav a:hover {
-    /* background-color: #f9f9f9; */
+    color: black;
     background-color: var(--light-blue)
 }
 
@@ -101,8 +102,8 @@ li a {
   text-align: center;
   margin-top: 6px;
 }
-.sign-out a:hover {
-    background-color: #f9f9f9;
+.sign-out:hover {
+    background-color: white;
 }
 
 .nav .menu-icon {

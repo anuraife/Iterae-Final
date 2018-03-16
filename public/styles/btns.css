@@ -23,6 +23,16 @@
   transition: all 250ms ease-out;
 }
 
+.btn-blue {
+  color: white;
+  border-radius: 5px;
+}
+
+.btn-blue:hover{
+  background-color: #caebf2;
+  color: black;
+}
+
 /* Paper effect – slightly raised off background */
 .paper {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
@@ -227,8 +237,4 @@
   padding: 0;
   border: none;
   font-family: Comfortaa;
-}
-
-.but:hover {
-  background-color: gray;
 }

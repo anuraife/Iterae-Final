@@ -178,13 +178,6 @@ function changeScale(level, clickedID){
 
 }
 
-function signOut() {
-    if (firebase.auth().currentUser) {
-        firebase.auth().signOut();
-    	window.location.href="splash.html";
-    }
-}
-
 window.onload = function() {
 	init();
 }

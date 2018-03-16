@@ -37,6 +37,10 @@ function renderProfile(uid) {
     var level = (snapshot.val() && snapshot.val().level) || "Unknown";
     var levelStr = level.charAt(0).toUpperCase() + level.slice(1);
     document.getElementById('skill-value').innerHTML = levelStr;
+
+    var joined = (snapshot.val() && snapshot.val().joined) || null;
+    var joinedStr = (joined) ? joined.slice(0, 10) : "Unknown";
+    document.getElementById('joined').innerHTML = joinedStr;
   });
 }
 

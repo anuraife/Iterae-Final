@@ -19,7 +19,10 @@ function init(){
         }
     });
     document.getElementById("avatar" + avatarIndex.toString()).classList.add("avatar-active")
-	document.getElementById('sign-up').addEventListener('click', signUp, false);
+	  document.getElementById('sign-up').addEventListener('click', signUp, false);
+
+    var join = new Date().getTime();
+    console.log(join);
 }
 
 function selectAvatar(index) {
@@ -67,13 +70,16 @@ function handleSignupError(error) {
 function savePreferences(uid, email) {
   var levelId = document.getElementById("level");
   var level = levelId.options[levelId.selectedIndex].value;
+  var joined = new Date().toString();
   var signup = firebase.database().ref('users/' + uid).set({
     username: email,
     avatar: avatarIndex,
     level: level,
+    joined: joined,
     bpm: 90,
     timeSig: "4/4",
-    metronome: 1
+    metronome: 1,
+    badges: [0, 0, 0, 0, 0, 0, 0]
   }).then(function onSuccess(res) {
     localStorage.setItem('avatar', avatarIndex);
     var b = document.getElementById('level').selectedIndex;
