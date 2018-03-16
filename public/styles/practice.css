@@ -10,17 +10,22 @@
 
 .scale-header {
 	font-size: 50px;
-  	float:center;
-	margin-left:275px;
-	margin-top: 45px;
+	position: absolute;
+	display: block;
+  	left: 650px;
+  	top: 125px;
+	/*margin-left:275px;
+	margin-top: 45px;*/
 }
 
 #scale-notes {
 	display: block;
     margin-left: auto;
-    margin-right: 150px;
-	margin-top: 300px;
+    /*margin-right: 150px;
+	margin-top: 300px;*/
 	width: 800px; height: auto;
+	position: absolute;
+	top: 450px;
 }
 
 
@@ -140,12 +145,15 @@
 }
 
 .metronome-container {
-	margin-right: 20%;
+	/*margin-right: 20%;*/
     display: inline;
 	float: right;
 	display: inline;
 	vertical-align: center;
-	margin-top: -35%;
+	/*margin-top: -35%;*/
+	position: absolute;
+	left: 400px;
+	top: 200px;
 }
 
 .controls {
