@@ -155,17 +155,19 @@ function clearer() {
 }
 
 function changeKey(key){
-
 	var scale = document.getElementById('scale-name').innerHTML.toLowerCase();
+	var imageURI;
 	if (key[1] == ("#")){
-		document.getElementById('scale-notes').src='res/scales/' + key[0].toLowerCase() + 'sharp' + '_' + scale + '.png';
+		imageURI = 'res/scales/' + key[0].toLowerCase() + 'sharp' + '_' + scale + '.png';
 	}
 	else if (key[1] == ('b')){
-		document.getElementById('scale-notes').src='res/scales/' + key[0].toLowerCase() + 'flat'+ '_' + scale + '.png';
+		imageURI = 'res/scales/' + key[0].toLowerCase() + 'flat'+ '_' + scale + '.png';
 	}
 	else{
-		document.getElementById('scale-notes').src='res/scales/' + key.toLowerCase() + '_' + scale + '.png';
+		imageURI = 'res/scales/' + key.toLowerCase() + '_' + scale + '.png';
 	}
+
+	renderScale(imageURI);
 	document.getElementById('key-name').innerHTML = key;
 }
 
@@ -207,9 +209,26 @@ function changeScale(level, clickedID){
 
 	var key = document.getElementById('key-name').innerHTML.toLowerCase();
 	var scale = document.getElementById('scale-name').innerHTML.toLowerCase();
-	document.getElementById('scale-notes').src='res/scales/' + key + '_' + scale + '.png';
-
+	imageURI = 'res/scales/' + key + '_' + scale + '.png';
+	renderScale(imageURI);
 }
+
+function renderScale(imageURI) {
+	var testImg = new Image();
+	testImg.onload = loadImg;
+	testImg.onerror = replaceImg;
+	testImg.src = imageURI;
+
+	function loadImg() {
+		document.getElementById('scale-notes').src = imageURI;
+	}
+
+	function replaceImg() {
+		imageURI = 'res/scales/scaleBlank.png';
+		document.getElementById('scale-notes').src = imageURI;
+	}
+}
+
 window.onload = function() {
 	init();
 }
