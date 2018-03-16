@@ -21,7 +21,6 @@ function initNav() {
 
 function getAvatar(uid) {
     var avatar = localStorage.getItem('avatar');
-    console.log(avatar);
     if (avatar == null) {
         firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
             var avatar = (snapshot.val() && snapshot.val().avatar) || 0;
@@ -30,7 +29,6 @@ function getAvatar(uid) {
     }
     
     document.getElementById('nav-avatar').src = "res/avatars/avatar" + avatar + ".png"
-    console.log(avatar);
 }
 
 function signOut() {

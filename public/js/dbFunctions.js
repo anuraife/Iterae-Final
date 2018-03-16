@@ -21,9 +21,7 @@ function renderBadge(badges, index, type) {
         modal.style.top = (rect.y + 65).toString() + "px";
         modal.style.left = (rect.x - 100).toString() + "px";
     }
-    console.log(badges);
     if (badges[index]) {
-        console.log("true");
         if (type == "color") {
             btn.style.filter = "grayscale(0)";
         } else {
