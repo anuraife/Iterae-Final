@@ -7,6 +7,8 @@
 <link rel="stylesheet" type="text/css" href="styles/profile.css"/>
 <link rel="stylesheet" type="text/css" href="styles/settings.css"/>
 <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
@@ -64,6 +66,9 @@
     <div class = "bpm-setting-wrapper">
       <label for="BPM"><b>Default BPM</b></label>
       <input type="text" placeholder="Enter number 1-200" name="newBPM" id="bpm">
+      <div class="tooltip"> <i class="material-icons">help_outline</i>
+      <span class="tooltiptext">Change your default starting BPM</span>
+    </div>
     </div>
     <p class = "timesig"> Time Signature </p>
     <input type="radio" name="timesignature" value="4/4" checked> 4 / 4<br>
