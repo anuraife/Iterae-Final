@@ -43,3 +43,17 @@ function renderBadge(badges, index, type) {
         return BadgeArray[num-1];
     }
 }
+
+function updateStreak(uid, streak, lastPracticed) {
+    var now = new Date().setHours(0, 0, 0, 0);
+    var prev = new Date(lastPracticed).setHours(0, 0, 0, 0);
+    if (prev != now) {
+      streak = (prev > now - 86400000) ? streak + 1 : 0; // 86400000 Seconds in a day
+
+      firebase.database().ref().child('/users/' + uid).update({streak: streak})
+      .catch(function onError(err) {
+        console.log(err);
+      });
+    }
+    return streak;
+}

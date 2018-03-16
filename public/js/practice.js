@@ -84,8 +84,8 @@ function setPosition(){
 
 
 function savePractice() {
-  var today = new Date().toString();
-  console.log(currSelScale);
+  var today = new Date().getTime();
+  getStreak(today);
   return firebase.database().ref().child('/users/' + uid).update({
   	lastPracticed: today,
   	lastScale: currName
@@ -95,6 +95,15 @@ function savePractice() {
 
 }
 
+function getStreak(prev) {
+	firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+      var streak = (snapshot.val() && snapshot.val().streak) || null;
+      if (streak) {
+      	streak = updateStreak(uid, streak, prev);
+      }
+    });
+}
+ 
 function renderMetronome(uid) {
     firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
       this.metronomeType = (snapshot.val() && snapshot.val().metronome) || 1;

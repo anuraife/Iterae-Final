@@ -70,7 +70,7 @@ function handleSignupError(error) {
 function savePreferences(uid, email) {
   var levelId = document.getElementById("level");
   var level = levelId.options[levelId.selectedIndex].value;
-  var joined = new Date().toString();
+  var joined = new Date().getTime();
   var signup = firebase.database().ref('users/' + uid).set({
     username: email,
     avatar: avatarIndex,
@@ -82,7 +82,8 @@ function savePreferences(uid, email) {
     badges: [0, 0, 0, 0, 0, 0, 0],
     lastPracticed: "Never",
     lastScale: "None",
-    lastBadge: "None"
+    lastBadge: "None",
+    streak: 0
   }).then(function onSuccess(res) {
     localStorage.setItem('avatar', avatarIndex);
     var b = document.getElementById('level').selectedIndex;

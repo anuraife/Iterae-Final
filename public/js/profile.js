@@ -39,7 +39,7 @@ function renderProfile(uid) {
     document.getElementById('skill-value').innerHTML = levelStr;
 
     var joined = (snapshot.val() && snapshot.val().joined) || null;
-    var joinedStr = (joined) ? joined.slice(0, 10) : "Unknown";
+    var joinedStr = (joined) ? new Date(joined).toString().slice(0, 10) : "Unknown";
     document.getElementById('joined').innerHTML = joinedStr;
   });
 }

@@ -43,14 +43,23 @@ function init(){
 
 function renderStats(uid) {
     firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
-      lastPracticed = (snapshot.val() && snapshot.val().lastPracticed) || "Unknown";
-      document.getElementById('lastPracticed').innerHTML = lastPracticed.slice(0, 10);
+      var lastPracticed = (snapshot.val() && snapshot.val().lastPracticed) || "Unknown";
+      if (lastPracticed != "Unknown" && lastPracticed != "Never") {
+        lastPracticed = new Date(lastPracticed).toString().slice(0, 10);
+      }
+      document.getElementById('lastPracticed').innerHTML = lastPracticed;
 
-      lastScale = (snapshot.val() && snapshot.val().lastScale) || "Unknown";
+      var lastScale = (snapshot.val() && snapshot.val().lastScale) || "Unknown";
       document.getElementById('lastScale').innerHTML = lastScale;
 
-      lastBadge = (snapshot.val() && snapshot.val().lastBadge) || "Unknown";
+      var lastBadge = (snapshot.val() && snapshot.val().lastBadge) || "Unknown";
       document.getElementById('lastBadge').innerHTML = lastBadge;
+
+      var streak = (snapshot.val() && (snapshot.val().streak >= 0)) ? snapshot.val().streak : "Unknown";
+      if (streak != "Unknown") {
+        streak = updateStreak(uid, streak, lastPracticed);
+      }
+      document.getElementById('streak').innerHTML = streak + " Days";
     });
 }
 
