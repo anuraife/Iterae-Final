@@ -1,13 +1,13 @@
 var i;
 var uid;
 var BadgeArray = [
-    "Level 1 Badge",
-    "Level 2 Badge",
-    "Level 3 Badge",
-    "Level 4 Badge",
-    "Speedster Badge",
-    "100% Accuracy Badge",
-    "Beethoven Badge"
+    "Beginner Badge: play metronome once",
+    "Wildfire Badge: maintain a two week streak",
+    "Overachiever Badge: score over 80% accuracy for all major and minor scales",
+    "Treble Badge: practice with all time signatures",
+    "Speedster Badge: practice at 150 BPM",
+    "Artist Badge: score perfect accuracy",
+    "Beethoven Badge: practice all scale variations"
 ];
 
 var poorColor = "#e9e9f0";
@@ -50,7 +50,7 @@ function init(){
                 scaleChild.style.backgroundColor = colorMapping[Math.floor(3*Math.random())];
             }
         }
-    } 
+    }
 };
 
 window.onload = function() {
