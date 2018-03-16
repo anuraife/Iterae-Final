@@ -76,3 +76,16 @@
     visibility: visible;
 }
 
+.answer {
+  width: 20px;
+  margin: 10px 0px;
+  outline: none;
+}
+
+.mdl-layout__header-row {
+  padding: 0;
+}
+
+.buffer {
+  margin-bottom: 40px;
+}

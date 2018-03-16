@@ -7,8 +7,8 @@
 <link rel="stylesheet" type="text/css" href="styles/profile.css"/>
 <link rel="stylesheet" type="text/css" href="styles/settings.css"/>
 <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
@@ -66,7 +66,7 @@
     </div>
     <div class = "bpm-setting-wrapper">
       <label for="BPM"><b>Default BPM</b></label>
-      <input type="text" placeholder="Enter number 1-200" name="newBPM" id="bpm">
+      <input type="text" placeholder="Enter number 1-200" name="newBPM" id="bpm" class="mdl-textfield__input answer">
       <div class="tooltip"> <i class="material-icons">help_outline</i>
       <span class="tooltiptext">Change your default starting BPM</span>
     </div>
@@ -80,6 +80,6 @@
       <input type="image" src="res/metronome/metro_1/metronome.png"  alt="Metronome 1" class="metronome" id="metronome1" onclick="changeMetronome(1)">
       <input type="image" src="res/metronome/metro_2/metronome.png"  alt="Metronome 2" class="metronome" id="metronome2" onclick="changeMetronome(2)">
     </div>
-    <button class="but btn-blue" id="save-settings" name="save-settings" onclick="saveSettings(); getAvatar();">Save Settings</button>
+    <button class="but btn-blue buffer" id="save-settings" name="save-settings" onclick="saveSettings(); getAvatar();">Save Settings</button>
 
   </div>
