@@ -33,7 +33,7 @@ function init() {
             signedIn = false;
             window.location.href="splash.html";
         }
-    }); 
+    });
 
 	document.getElementById("bpm").value = tempo.toString();
 	selectRhythm(rhythm);
@@ -42,13 +42,52 @@ function init() {
 
 	var parsedURL = new URL(window.location.href);
   	var scale = parsedURL.searchParams.get("scale");
-	if (scale) {document.getElementById('scale-name').innerHTML = scale;}
-	
+		if (scale) {
+	  document.getElementById('scale-name').innerHTML = scale;
+
+	  if (scale == "Major" || scale == "Minor")
+	  {
+			var level = 'beginner';
+			currSelScale = document.getElementById("major_scale");
+		}
+	  if (scale == "Harmonic" || scale == "Melodic" || scale == "Chromatic" || scale == "Pentatonic")
+	  {
+			var level = "intermediate";
+			currSelScale = document.getElementById("harmonic_scale");
+		}
+		if (scale == "Ionian" || scale == "Dorian" || scale == "Phrygian" || scale == "Lydian" || scale == "Mixolydian" || scale == "Aeolian" || scale == "Locrian")
+		{
+			var level = 'expert';
+			currSelScale = document.getElementById("ionian_scale");
+		}
+	  var scaleLevel = level + "-scale-container";
+	  console.log(scaleLevel);
+	  var id = scale.toLowerCase() + "_scale"
+	  var clickedScale = document.getElementById(id);
+
+	  var lev = level.substring(0, 3);
+
+	  document.getElementById(scaleLevel).classList = 'other-level';
+	  console.log('cursel');
+	  currSelScale.classList.remove('selected');
+	  currSelScale.classList.add('other');
+
+	  clickedScale.classList.remove('other');
+	  clickedScale.classList.add('selected');
+	  currSelScale = clickedScale;
+	  document.getElementById('scale-name').innerHTML = currSelScale.innerHTML;
+
+	  var key = document.getElementById('key-name').innerHTML.toLowerCase();
+	  var scale = document.getElementById('scale-name').innerHTML.toLowerCase();
+	  imageURI = 'res/scales/' + key + '_' + scale + '.png';
+	  renderScale(imageURI);
+	}
+
 	currSelScale = document.getElementsByClassName("selected")[0];
 	var key = document.getElementById('key-name').innerHTML;
 	var scale = document.getElementById('scale-name').innerHTML;
 	currName = key + " " + scale;
-	
+
 	document.getElementById('scale-notes').src = 'res/scales/' + document.getElementById('key-name').innerHTML.toLowerCase() + '_' + currSelScale.innerHTML.toLowerCase() + '.png';
 
 };
