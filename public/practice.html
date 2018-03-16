@@ -103,13 +103,13 @@
 		<div class="metronome-container">
 			<div class="metronome">
 				<img src="res/metronome/metro_1/metronome.png" alt="Metronome" class="metronome-image" id="metro">
+				<img src="res/play.png" class="play-pause" id="playPause" onclick="metronome()">
+			</div>
+			<div class="controls">
 				<div class="metronome-text">
 					<input type="number" class="bpm" id="bpm" min="1" max="220" value="90">
 					<h2>BPM</h2>
 				</div>
-			</div>
-			<div class="controls">
-				<img src="res/play.png" class="play-pause" id="playPause" onclick="metronome()">
 		    	<div class="rhythm-options">
 			    	<button class="btn paper-flatten" id="consistent" onclick="switchRhythm('consistent')">Consistent</button>
 			    	<button class="btn paper-flatten" id="acceleration" onclick="switchRhythm('acceleration')">Acceleration</button>
