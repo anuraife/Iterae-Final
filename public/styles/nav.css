@@ -11,6 +11,7 @@ h1, h2, h3, body {
     overflow: visible;
     background-color: var(--dark-blue);
     height: 50px;
+    font-family: 'Comfortaa';
 }
 
 .logo {

@@ -1,17 +1,21 @@
-.fas{
-  width: 100px;
-  height: auto;
+h1, h2, h3, body {
+    margin: 0;
+    font-family: "Comfortaa";
 }
 
 .settings{
   width: 500px;
   margin-left: 200px;
+  font-family: 'Comfortaa';
 }
 
 .change-metronome{
   /*margin-left: -75px;*/
+  font-family: "Comfortaa";
   float: left;
-  color: #88bbd6;
+  /*color: #88bbd6;*/
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .account-settings{
@@ -21,6 +25,7 @@
   width: 500px;
   float: left;
   color: #88bbd6;
+  font-family: "Comfortaa";
 }
 .timesig{
   font-weight: bold;
@@ -42,11 +47,20 @@
   height: 65px;
 }
 
+.metronome-pics{
+  position: relative;
+  right: 200px;
+  top: 50px;
+}
+
 .metronome {
   width: 100px; height: auto;
+  /*margin-top: 100px;*/
   margin-left: 70px;
   opacity: 0.4;
   outline: none;
+  float: right;
+
 }
 
 .tooltip {
@@ -88,4 +102,5 @@
 
 .buffer {
   margin-bottom: 40px;
+  top: 100px;
 }
