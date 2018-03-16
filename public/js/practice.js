@@ -37,6 +37,10 @@ function init() {
 	selectRhythm(rhythm);
 
 	currSelScale = document.getElementsByClassName("selected")[0];
+	var parsedURL = new URL(window.location.href);
+  var scale= parsedURL.searchParams.get("scale");
+	console.log(scale);
+	document.getElementById('scale-name').innerHTML = scale;
 };
 
 function renderMetronome(uid) {
@@ -148,7 +152,7 @@ function clearer() {
 }
 
 function changeKey(key){
-	
+
 	var scale = document.getElementById('scale-name').innerHTML.toLowerCase();
 	if (key[1] == ("#")){
 		document.getElementById('scale-notes').src='res/scales/' + key[0].toLowerCase() + 'sharp' + '_' + scale + '.png';
@@ -171,21 +175,21 @@ function changeLevel(level){
 	document.getElementById(scaleLevel).classList = 'selected-level';
 }
 
-function changeScale(level, clickedID){	
+function changeScale(level, clickedID){
 	//minmizes the popup
 	console.log('currrr');
 	console.log(currSelScale);
 
 	var scaleLevel = level + "-scale-container";
 	var clickedScale = document.getElementById(clickedID);
-	
+
 	var lev = level.substring(0, 3);
-	
+
 	var currScaleName = document.getElementById('scale-name').innerHTML;
 	//var currSelScale = document.getElementsByClassName(lev)[0];
-	
+
 	document.getElementById(scaleLevel).classList = 'other-level';
-	
+
 	console.log('cursel');
 	console.log(currSelScale);
 	currSelScale.classList.remove('selected');
@@ -203,7 +207,6 @@ function changeScale(level, clickedID){
 	document.getElementById('scale-notes').src='res/scales/' + key + '_' + scale + '.png';
 
 }
-
 window.onload = function() {
 	init();
 }

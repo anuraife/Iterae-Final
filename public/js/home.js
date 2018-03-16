@@ -19,7 +19,7 @@ function init(){
             window.location.href="splash.html";
         }
     });
-    
+
 
     // Load in accordina contents
     var acc = document.getElementsByClassName("accordion");
@@ -40,13 +40,13 @@ function init(){
     }
 };
 
-function changePractice(innerHTML){
-    window.location.href = "practice.html";
-    document.getElementById('scale-name').innerHTML = innerHTML;
-
+function changePractice(scale){
+    // window.location.href = "practice.html";
+    // document.getElementById('scale-name').innerHTML = innerHTML;
+    var b = document.getElementById(scale).value;
+    window.location.href="practice.html?scale="+ encodeURIComponent(b);
 }
 
 window.onload = function() {
     init();
 }
-
