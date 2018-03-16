@@ -40,7 +40,7 @@ function init() {
 
 	setPosition();
 
-	var parsedURL = new URL(window.location.href);
+		var parsedURL = new URL(window.location.href);
   	var scale = parsedURL.searchParams.get("scale");
 		if (scale) {
 	  document.getElementById('scale-name').innerHTML = scale;
@@ -60,27 +60,9 @@ function init() {
 			var level = 'expert';
 			currSelScale = document.getElementById("ionian_scale");
 		}
-	  var scaleLevel = level + "-scale-container";
-	  console.log(scaleLevel);
 	  var id = scale.toLowerCase() + "_scale"
 	  var clickedScale = document.getElementById(id);
-
-	  var lev = level.substring(0, 3);
-
-	  document.getElementById(scaleLevel).classList = 'other-level';
-	  console.log('cursel');
-	  currSelScale.classList.remove('selected');
-	  currSelScale.classList.add('other');
-
-	  clickedScale.classList.remove('other');
-	  clickedScale.classList.add('selected');
-	  currSelScale = clickedScale;
-	  document.getElementById('scale-name').innerHTML = currSelScale.innerHTML;
-
-	  var key = document.getElementById('key-name').innerHTML.toLowerCase();
-	  var scale = document.getElementById('scale-name').innerHTML.toLowerCase();
-	  imageURI = 'res/scales/' + key + '_' + scale + '.png';
-	  renderScale(imageURI);
+		changeScale(level,id);
 	}
 
 	currSelScale = document.getElementsByClassName("selected")[0];
