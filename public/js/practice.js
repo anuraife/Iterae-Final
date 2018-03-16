@@ -39,12 +39,11 @@ function init() {
 	var parsedURL = new URL(window.location.href);
   	var scale= parsedURL.searchParams.get("scale");
 	if (scale) {document.getElementById('scale-name').innerHTML = scale;}
-
-	document.getElementById('scale-notes').src='res/scales/' + document.getElementById('key-name').innerHTML.toLowerCase() + '_' + scale.toLowerCase() + '.png';
+	
 	currSelScale = document.getElementsByClassName("selected")[0];
-	console.log('curr');
-	console.log(currSelScale);
-	console.log(document.getElementsByClassName("selected"));
+	
+	document.getElementById('scale-notes').src='res/scales/' + document.getElementById('key-name').innerHTML.toLowerCase() + '_' + currSelScale.innerHTML.toLowerCase() + '.png';
+
 };
 
 function renderMetronome(uid) {
