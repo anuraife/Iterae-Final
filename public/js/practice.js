@@ -1,3 +1,4 @@
+var metronomeType;         // Metrnomoe type
 var tempo = 90;            // Initial metronome tempo
 var paused = true;		   // Play/pause state
 var metronomeLeft = true;  // Boolean for metronome arm position
@@ -24,6 +25,7 @@ function init() {
             var uid = user.uid;
             var providerData = user.providerData;
             signedIn = true;
+            renderMetronome(uid);
             document.getElementById('sign-out').addEventListener('click', signOut, false);
         } else {
             signedIn = false;
@@ -37,13 +39,20 @@ function init() {
 	currSelScale = document.getElementsByClassName("selected")[0];
 };
 
+function renderMetronome(uid) {
+    firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+      this.metronomeType = (snapshot.val() && snapshot.val().metronome) || 1;
+      document.getElementById("metro").src = "res/metronome/metro_" + metronomeType + "/metronome.png";
+    });
+}
+
 // Play/pause button is pressed for metronome
 function metronome() {
 	var playPause = document.getElementById("playPause");
 	paused = !paused;
 	if (paused) {
 		playPause.src = "res/play.png";
-		document.getElementById("metro").src = "res/metronome/metro_1/metronome.png";
+		document.getElementById("metro").src = "res/metronome/metro_" + metronomeType + "/metronome.png";
 		clearer();
 	} else {
 		playPause.src = "res/pause.png";
@@ -94,7 +103,7 @@ function startMetronome() {
 // Metronome action on each swing
 function tick() {
 	frame = metronomeLeft ? "l2" : ("r2");
-	document.getElementById("metro").src = "res/metronome/metro_1/metro_" + frame + ".png";
+	document.getElementById("metro").src = "res/metronome/metro_" + metronomeType + "/metro_" + frame + ".png";
 	metronomeLeft = !metronomeLeft;
 	click.play();
 }

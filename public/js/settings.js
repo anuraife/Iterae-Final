@@ -4,6 +4,7 @@ var level;
 var avatarIndex;
 var bpm;
 var timeSig;
+var badges;
 var currMetronome = 0;
 
 function init(){
@@ -33,6 +34,9 @@ function renderSettings(uid) {
   document.getElementById("avatar" + avatarIndex.toString()).classList.add("avatar-active");
   
   firebase.database().ref('/users/' + uid).once('value').then(function(snapshot) {
+    joined = (snapshot.val() && snapshot.val().joined) || "Unknown";
+    badges = (snapshot.val() && snapshot.val().badges) || [0, 0, 0, 0, 0, 0, 0];
+
     bpm = (snapshot.val() && snapshot.val().bpm) || 90;
     document.getElementById('bpm').text = bpm;
 

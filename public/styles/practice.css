@@ -161,11 +161,6 @@
 	margin-left: 40px;
 }
 
-.play-pause:hover {
-	height: 100px;
-	margin-bottom: 60px;
-}
-
 .rhythm-options {
 	display: block;
 	align-items: center;
@@ -199,9 +194,9 @@
 }
 
 .metronome-image {
-    height: 225px;
+    width: 171px;
     margin: 0px 20px;
-		margin-left: 70px;
+	margin-left: 70px;
 }
 
 .metronome-text {
@@ -317,8 +312,6 @@ h2 {
 #scale-dropdown:hover .scale-dropdown-content {
     display: block;
 }
-
-
 
 #scale-dropdown:hover #scale-dropbtn {
     background-color: #caebf2;
