@@ -12,6 +12,7 @@ h1, h2, h3, body {
     background-color: var(--dark-blue);
     height: 50px;
     font-family: 'Comfortaa';
+    font-size: 16px;
 }
 
 .logo {

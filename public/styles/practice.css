@@ -144,7 +144,7 @@
 	font-size: 47px;
 }
 
-.metronome-container {
+#metronome-container {
 	/*margin-right: 20%;*/
     display: inline;
 	float: right;
@@ -152,7 +152,7 @@
 	vertical-align: center;
 	/*margin-top: -35%;*/
 	position: absolute;
-	left: 400px;
+	/*left: screen.width - 300px;*/
 	top: 200px;
 }
 
@@ -197,14 +197,13 @@
 	align-items: center;
 	vertical-align: center;
 	justify-content: center;
-	width: 410px;
+	width: 350px;
 	height: 229px;
 }
 
 .metronome-image {
     width: 171px;
-    margin: 0px 20px;
-	margin-left: 70px;
+	margin-right: 20px;
 }
 
 .metronome-text {
